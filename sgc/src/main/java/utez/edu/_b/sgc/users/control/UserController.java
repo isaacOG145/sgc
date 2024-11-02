@@ -19,25 +19,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/all")
-    public ResponseEntity<Object> getAllUsers() {
-        return userService.findAll();
-    }
 
-    @PostMapping("/save")
-    public ResponseEntity<Object> saveUser(@Validated(UserDto.Register.class) @RequestBody UserDto dto) {
-        return userService.save(dto);
-    }
-
-    @PutMapping("/update")
-    public ResponseEntity<Object> updateUser(@Validated(UserDto.Modify.class) @RequestBody UserDto dto) {
-        return userService.update(dto);
-    }
-
-    @PutMapping("/change-status")
-    public ResponseEntity<Object> changeStatus(@Validated(UserDto.ChangeStatus.class) @RequestBody UserDto dto) {
-        return userService.changeStatus(dto);
-    }
 
 
 }

@@ -15,7 +15,7 @@ public class Customer {
     @Column(name = "id_customer")
     private long id;
 
-    @Column (name = "name", columnDefinition = "VARCHAR(50)")
+    @Column (name = "name", columnDefinition = "VARCHAR(100)")
     private String name;
 
     @Column (name = "email", columnDefinition = "VARCHAR(100)")
@@ -33,8 +33,7 @@ public class Customer {
 
     public Customer() {}
 
-    public Customer(long id, String name, String email, String phoneNumber, boolean status) {
-        this.id = id;
+    public Customer(String name, String email, String phoneNumber, boolean status) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;

@@ -15,10 +15,6 @@ public class CustomerDto {
             message = "El nombre no puede contener caracteres especiales")
     private String name;
 
-    @NotBlank(groups = {Modify.class, Register.class}, message = "El campo apellidos no puede estar vacio")
-    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$",
-            message = "El campo apellido no puede contener caracteres especiales")
-    private String lastName;
 
     @Email(groups = {Modify.class, Register.class},message = "Debe ser un correo electrónico válido")
     @NotBlank(groups = {Modify.class, Register.class},message = "El correo no puede estar vacío")
@@ -38,9 +34,6 @@ public class CustomerDto {
         return this.name;
     }
 
-    public String getLastName() {
-        return this.lastName;
-    }
 
     public String getEmail() {
         return this.email;
@@ -58,9 +51,6 @@ public class CustomerDto {
         this.name = name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 
     public void setEmail(String email) {
         this.email = email;

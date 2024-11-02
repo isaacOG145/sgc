@@ -2,9 +2,9 @@ package utez.edu._b.sgc.customer.control;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+import utez.edu._b.sgc.customer.model.CustomerDto;
 import utez.edu._b.sgc.utils.Message;
 
 @RestController
@@ -23,5 +23,24 @@ public class CustomerController {
         return customerService.findAll();
     }
 
+    @GetMapping("/active")
+    public ResponseEntity<Message> getActiveCustomers() {
+        return customerService.findActiveCustomers();
+    }
+
+    @PostMapping("/save")
+    public ResponseEntity<Message> saveCustomers(@Validated(CustomerDto.Register.class) @RequestBody CustomerDto dto) {
+        return customerService.save(dto);
+    }
+
+    @PutMapping("/update")
+    public ResponseEntity<Message> updateCustomers(@Validated(CustomerDto.Modify.class) @RequestBody CustomerDto dto) {
+        return customerService.update(dto);
+    }
+
+    @PutMapping("/change-status")
+    public ResponseEntity<Message> changeStatus(@Validated(CustomerDto.ChangeStatus.class) @RequestBody CustomerDto dto) {
+        return customerService.changeStatus(dto);
+    }
 
 }

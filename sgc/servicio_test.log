@@ -1,258 +1,72 @@
-2024-10-30T22:21:08.515-06:00  INFO 25236 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23 with PID 25236 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc)
-2024-10-30T22:21:08.516-06:00  INFO 25236 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-10-30T22:21:09.020-06:00  INFO 25236 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-30T22:21:09.057-06:00  INFO 25236 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
-2024-10-30T22:21:09.369-06:00  INFO 25236 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-30T22:21:09.383-06:00  INFO 25236 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-30T22:21:09.383-06:00  INFO 25236 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-30T22:21:09.418-06:00  INFO 25236 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-30T22:21:09.418-06:00  INFO 25236 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 871 ms
-2024-10-30T22:21:09.510-06:00  INFO 25236 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-30T22:21:09.556-06:00  INFO 25236 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-30T22:21:09.583-06:00  INFO 25236 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-30T22:21:09.791-06:00  INFO 25236 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-30T22:21:09.812-06:00  INFO 25236 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-30T22:21:10.129-06:00  INFO 25236 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b8d20e6
-2024-10-30T22:21:10.131-06:00  INFO 25236 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-30T22:21:10.192-06:00  WARN 25236 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-30T22:21:10.193-06:00  WARN 25236 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-30T22:21:10.324-06:00 ERROR 25236 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Association 'utez.edu._b.sgc.projectCat.model.ProjectCategory.project' is 'mappedBy' a property named 'project_category' which does not exist in the target entity type 'utez.edu._b.sgc.projects.model.Project'
-2024-10-30T22:21:10.324-06:00  WARN 25236 --- [sgc] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Association 'utez.edu._b.sgc.projectCat.model.ProjectCategory.project' is 'mappedBy' a property named 'project_category' which does not exist in the target entity type 'utez.edu._b.sgc.projects.model.Project'
-2024-10-30T22:21:10.326-06:00  INFO 25236 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-30T22:21:10.373-06:00  INFO 25236 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-30T22:21:10.375-06:00  INFO 25236 --- [sgc] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-10-30T22:21:10.382-06:00  INFO 25236 --- [sgc] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-11-02T13:54:54.020-06:00  INFO 27044 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23 with PID 27044 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc)
+2024-11-02T13:54:54.026-06:00  INFO 27044 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-11-02T13:54:54.651-06:00  INFO 27044 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-02T13:54:54.688-06:00  INFO 27044 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2024-11-02T13:54:54.992-06:00  INFO 27044 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-02T13:54:55.000-06:00  INFO 27044 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-02T13:54:55.000-06:00  INFO 27044 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-02T13:54:55.031-06:00  INFO 27044 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-02T13:54:55.031-06:00  INFO 27044 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 976 ms
+2024-11-02T13:54:55.124-06:00  INFO 27044 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-02T13:54:55.156-06:00  INFO 27044 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-02T13:54:55.174-06:00  INFO 27044 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-02T13:54:55.353-06:00  INFO 27044 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-02T13:54:55.371-06:00  INFO 27044 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-02T13:54:55.665-06:00  INFO 27044 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c8f047a
+2024-11-02T13:54:55.666-06:00  INFO 27044 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-02T13:54:55.698-06:00  WARN 27044 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-02T13:54:55.698-06:00  WARN 27044 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-11-02T13:54:56.265-06:00  INFO 27044 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-02T13:54:56.441-06:00  INFO 27044 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-02T13:54:56.664-06:00  WARN 27044 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-02T13:54:56.843-06:00  WARN 27044 --- [sgc] [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-10-30T22:21:10.395-06:00 ERROR 25236 --- [sgc] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Association 'utez.edu._b.sgc.projectCat.model.ProjectCategory.project' is 'mappedBy' a property named 'project_category' which does not exist in the target entity type 'utez.edu._b.sgc.projects.model.Project'
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
-	at utez.edu._b.sgc.SgcApplication.main(SgcApplication.java:10) ~[classes/:na]
-Caused by: org.hibernate.AnnotationException: Association 'utez.edu._b.sgc.projectCat.model.ProjectCategory.project' is 'mappedBy' a property named 'project_category' which does not exist in the target entity type 'utez.edu._b.sgc.projects.model.Project'
-	at org.hibernate.boot.model.internal.OneToOneSecondPass.targetProperty(OneToOneSecondPass.java:239) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.model.internal.OneToOneSecondPass.bindUnowned(OneToOneSecondPass.java:148) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.model.internal.OneToOneSecondPass.doSecondPass(OneToOneSecondPass.java:128) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1811) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1770) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:334) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
-	... 15 common frames omitted
-
-2024-10-30T22:21:23.574-06:00  INFO 8404 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23 with PID 8404 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc)
-2024-10-30T22:21:23.575-06:00  INFO 8404 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-10-30T22:21:23.935-06:00  INFO 8404 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-30T22:21:23.968-06:00  INFO 8404 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
-2024-10-30T22:21:24.253-06:00  INFO 8404 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-30T22:21:24.259-06:00  INFO 8404 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-30T22:21:24.260-06:00  INFO 8404 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-30T22:21:24.289-06:00  INFO 8404 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-30T22:21:24.289-06:00  INFO 8404 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 685 ms
-2024-10-30T22:21:24.368-06:00  INFO 8404 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-30T22:21:24.397-06:00  INFO 8404 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-30T22:21:24.415-06:00  INFO 8404 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-30T22:21:24.585-06:00  INFO 8404 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-30T22:21:24.603-06:00  INFO 8404 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-30T22:21:24.818-06:00  INFO 8404 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fd87c22
-2024-10-30T22:21:24.819-06:00  INFO 8404 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-30T22:21:24.845-06:00  WARN 8404 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-30T22:21:24.845-06:00  WARN 8404 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-30T22:21:24.965-06:00 ERROR 8404 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Association 'utez.edu._b.sgc.projectCat.model.ProjectCategory.project' is 'mappedBy' a property named 'project_category' which does not exist in the target entity type 'utez.edu._b.sgc.projects.model.Project'
-2024-10-30T22:21:24.965-06:00  WARN 8404 --- [sgc] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Association 'utez.edu._b.sgc.projectCat.model.ProjectCategory.project' is 'mappedBy' a property named 'project_category' which does not exist in the target entity type 'utez.edu._b.sgc.projects.model.Project'
-2024-10-30T22:21:24.966-06:00  INFO 8404 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-30T22:21:24.977-06:00  INFO 8404 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-30T22:21:24.979-06:00  INFO 8404 --- [sgc] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-10-30T22:21:24.984-06:00  INFO 8404 --- [sgc] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-10-30T22:21:24.994-06:00 ERROR 8404 --- [sgc] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Association 'utez.edu._b.sgc.projectCat.model.ProjectCategory.project' is 'mappedBy' a property named 'project_category' which does not exist in the target entity type 'utez.edu._b.sgc.projects.model.Project'
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
-	at utez.edu._b.sgc.SgcApplication.main(SgcApplication.java:10) ~[classes/:na]
-Caused by: org.hibernate.AnnotationException: Association 'utez.edu._b.sgc.projectCat.model.ProjectCategory.project' is 'mappedBy' a property named 'project_category' which does not exist in the target entity type 'utez.edu._b.sgc.projects.model.Project'
-	at org.hibernate.boot.model.internal.OneToOneSecondPass.targetProperty(OneToOneSecondPass.java:239) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.model.internal.OneToOneSecondPass.bindUnowned(OneToOneSecondPass.java:148) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.model.internal.OneToOneSecondPass.doSecondPass(OneToOneSecondPass.java:128) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1811) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1770) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:334) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
-	... 15 common frames omitted
-
-2024-10-30T22:28:25.466-06:00  INFO 27536 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23 with PID 27536 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc)
-2024-10-30T22:28:25.468-06:00  INFO 27536 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-10-30T22:28:25.830-06:00  INFO 27536 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-30T22:28:25.863-06:00  INFO 27536 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
-2024-10-30T22:28:26.139-06:00  INFO 27536 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-30T22:28:26.147-06:00  INFO 27536 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-30T22:28:26.147-06:00  INFO 27536 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-30T22:28:26.178-06:00  INFO 27536 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-30T22:28:26.178-06:00  INFO 27536 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 682 ms
-2024-10-30T22:28:26.258-06:00  INFO 27536 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-30T22:28:26.289-06:00  INFO 27536 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-30T22:28:26.309-06:00  INFO 27536 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-30T22:28:26.484-06:00  INFO 27536 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-30T22:28:26.500-06:00  INFO 27536 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-30T22:28:26.712-06:00  INFO 27536 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56478522
-2024-10-30T22:28:26.713-06:00  INFO 27536 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-30T22:28:26.739-06:00  WARN 27536 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-30T22:28:26.739-06:00  WARN 27536 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-30T22:28:27.335-06:00  INFO 27536 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-30T22:28:27.621-06:00  INFO 27536 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-30T22:28:27.850-06:00  WARN 27536 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-30T22:28:28.040-06:00  WARN 27536 --- [sgc] [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: bd728246-e4b2-4e7a-a838-3f177c5696e1
+Using generated security password: 8539f65c-5c03-4601-8a4e-e79c504c512a
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2024-10-30T22:28:28.049-06:00  INFO 27536 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2024-10-30T22:28:28.147-06:00  INFO 27536 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-10-30T22:28:28.152-06:00  INFO 27536 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Started SgcApplication in 2.925 seconds (process running for 3.295)
-2024-10-30T22:31:01.384-06:00  INFO 27536 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-30T22:31:01.385-06:00  INFO 27536 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-30T22:31:01.389-06:00  INFO 27536 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-30T22:39:47.715-06:00  INFO 7740 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23 with PID 7740 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc)
-2024-10-30T22:39:47.717-06:00  INFO 7740 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-10-30T22:39:48.079-06:00  INFO 7740 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-30T22:39:48.110-06:00  INFO 7740 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
-2024-10-30T22:39:48.397-06:00  INFO 7740 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-30T22:39:48.405-06:00  INFO 7740 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-30T22:39:48.405-06:00  INFO 7740 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-30T22:39:48.435-06:00  INFO 7740 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-30T22:39:48.436-06:00  INFO 7740 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 691 ms
-2024-10-30T22:39:48.516-06:00  INFO 7740 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-30T22:39:48.545-06:00  INFO 7740 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-30T22:39:48.562-06:00  INFO 7740 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-30T22:39:48.731-06:00  INFO 7740 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-30T22:39:48.748-06:00  INFO 7740 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-30T22:39:48.961-06:00  INFO 7740 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60ae7cf2
-2024-10-30T22:39:48.962-06:00  INFO 7740 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-30T22:39:48.987-06:00  WARN 7740 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-30T22:39:48.987-06:00  WARN 7740 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-30T22:39:49.541-06:00  INFO 7740 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-30T22:39:49.731-06:00  INFO 7740 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-30T22:39:49.932-06:00  WARN 7740 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-30T22:39:50.106-06:00  WARN 7740 --- [sgc] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+2024-11-02T13:54:56.853-06:00  INFO 27044 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-11-02T13:54:56.966-06:00  INFO 27044 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-02T13:54:56.971-06:00  INFO 27044 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Started SgcApplication in 3.183 seconds (process running for 3.771)
+2024-11-02T13:56:08.110-06:00  INFO 27044 --- [sgc] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02T13:56:08.110-06:00  INFO 27044 --- [sgc] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-02T13:56:08.111-06:00  INFO 27044 --- [sgc] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-02T13:59:09.941-06:00  INFO 27044 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-02T13:59:09.942-06:00  INFO 27044 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-02T13:59:09.946-06:00  INFO 27044 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-02T14:01:03.611-06:00  INFO 30656 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23 with PID 30656 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc)
+2024-11-02T14:01:03.613-06:00  INFO 30656 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-11-02T14:01:03.975-06:00  INFO 30656 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-02T14:01:04.009-06:00  INFO 30656 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 3 JPA repository interfaces.
+2024-11-02T14:01:04.296-06:00  INFO 30656 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-02T14:01:04.304-06:00  INFO 30656 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-02T14:01:04.304-06:00  INFO 30656 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-02T14:01:04.336-06:00  INFO 30656 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-02T14:01:04.336-06:00  INFO 30656 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 693 ms
+2024-11-02T14:01:04.422-06:00  INFO 30656 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-02T14:01:04.452-06:00  INFO 30656 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-02T14:01:04.470-06:00  INFO 30656 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-02T14:01:04.643-06:00  INFO 30656 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-02T14:01:04.660-06:00  INFO 30656 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-02T14:01:04.878-06:00  INFO 30656 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@717a8a76
+2024-11-02T14:01:04.879-06:00  INFO 30656 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-02T14:01:04.905-06:00  WARN 30656 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-02T14:01:04.905-06:00  WARN 30656 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-11-02T14:01:05.474-06:00  INFO 30656 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-02T14:01:05.585-06:00  INFO 30656 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-02T14:01:05.815-06:00  WARN 30656 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-02T14:01:05.997-06:00  WARN 30656 --- [sgc] [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 849bf5ac-4ba2-41cb-a7e9-a37784ef224a
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2024-10-30T22:39:50.114-06:00  INFO 7740 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2024-10-30T22:39:50.214-06:00  INFO 7740 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-10-30T22:39:50.219-06:00  INFO 7740 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Started SgcApplication in 2.739 seconds (process running for 3.113)
-2024-10-30T22:41:04.749-06:00  INFO 7740 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-30T22:41:04.751-06:00  INFO 7740 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-30T22:41:04.755-06:00  INFO 7740 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-30T22:41:16.901-06:00  INFO 22108 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23 with PID 22108 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc)
-2024-10-30T22:41:16.902-06:00  INFO 22108 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-10-30T22:41:17.252-06:00  INFO 22108 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-30T22:41:17.283-06:00  INFO 22108 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
-2024-10-30T22:41:17.558-06:00  INFO 22108 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-30T22:41:17.566-06:00  INFO 22108 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-30T22:41:17.566-06:00  INFO 22108 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-30T22:41:17.596-06:00  INFO 22108 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-30T22:41:17.596-06:00  INFO 22108 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 665 ms
-2024-10-30T22:41:17.674-06:00  INFO 22108 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-30T22:41:17.703-06:00  INFO 22108 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-30T22:41:17.721-06:00  INFO 22108 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-30T22:41:17.887-06:00  INFO 22108 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-30T22:41:17.903-06:00  INFO 22108 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-30T22:41:18.115-06:00  INFO 22108 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5dd747c1
-2024-10-30T22:41:18.116-06:00  INFO 22108 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-30T22:41:18.141-06:00  WARN 22108 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-30T22:41:18.141-06:00  WARN 22108 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-30T22:41:18.685-06:00  INFO 22108 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-30T22:41:18.799-06:00  INFO 22108 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-30T22:41:19.000-06:00  WARN 22108 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-30T22:41:19.175-06:00  WARN 22108 --- [sgc] [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: bd66073c-73b5-405f-baf8-ce8af533f1cb
+Using generated security password: 3899857d-d78b-4891-abff-c6ec65291892
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2024-10-30T22:41:19.184-06:00  INFO 22108 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2024-10-30T22:41:19.273-06:00  INFO 22108 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-10-30T22:41:19.278-06:00  INFO 22108 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Started SgcApplication in 2.605 seconds (process running for 2.967)
-2024-10-30T22:42:36.402-06:00  INFO 22108 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-30T22:42:36.403-06:00  INFO 22108 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-30T22:42:36.407-06:00  INFO 22108 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-30T22:44:07.652-06:00  INFO 14832 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23 with PID 14832 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc)
-2024-10-30T22:44:07.653-06:00  INFO 14832 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-10-30T22:44:07.997-06:00  INFO 14832 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-30T22:44:08.028-06:00  INFO 14832 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
-2024-10-30T22:44:08.300-06:00  INFO 14832 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-30T22:44:08.308-06:00  INFO 14832 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-30T22:44:08.308-06:00  INFO 14832 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-30T22:44:08.337-06:00  INFO 14832 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-30T22:44:08.337-06:00  INFO 14832 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 654 ms
-2024-10-30T22:44:08.416-06:00  INFO 14832 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-30T22:44:08.444-06:00  INFO 14832 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-30T22:44:08.461-06:00  INFO 14832 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-30T22:44:08.632-06:00  INFO 14832 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-30T22:44:08.648-06:00  INFO 14832 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-30T22:44:08.883-06:00  INFO 14832 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fd87c22
-2024-10-30T22:44:08.884-06:00  INFO 14832 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-30T22:44:08.909-06:00  WARN 14832 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-30T22:44:08.909-06:00  WARN 14832 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-30T22:44:09.460-06:00  INFO 14832 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-30T22:44:09.675-06:00  INFO 14832 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-30T22:44:09.875-06:00  WARN 14832 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-30T22:44:10.045-06:00  WARN 14832 --- [sgc] [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: b6a4b565-0429-4d23-a204-8033a6c0a903
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2024-10-30T22:44:10.054-06:00  INFO 14832 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2024-10-30T22:44:10.138-06:00  INFO 14832 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-10-30T22:44:10.143-06:00  INFO 14832 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Started SgcApplication in 2.727 seconds (process running for 3.092)
-2024-10-30T22:47:20.935-06:00  INFO 14832 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-30T22:47:20.936-06:00  INFO 14832 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-30T22:47:20.940-06:00  INFO 14832 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-02T14:01:06.006-06:00  INFO 30656 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-11-02T14:01:06.108-06:00  INFO 30656 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-02T14:01:06.113-06:00  INFO 30656 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Started SgcApplication in 2.739 seconds (process running for 3.115)
+2024-11-02T14:01:15.814-06:00  INFO 30656 --- [sgc] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02T14:01:15.814-06:00  INFO 30656 --- [sgc] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-02T14:01:15.815-06:00  INFO 30656 --- [sgc] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-02T14:07:06.062-06:00  INFO 30656 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-02T14:07:06.063-06:00  INFO 30656 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-02T14:07:06.067-06:00  INFO 30656 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

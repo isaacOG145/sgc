@@ -5,8 +5,6 @@ import jakarta.persistence.*;
 import utez.edu._b.sgc.customer.model.Customer;
 import utez.edu._b.sgc.projectCat.model.ProjectCategory;
 
-import java.util.List;
-
 @Entity
 @Table (name = "project")
 public class Project {

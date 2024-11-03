@@ -26,17 +26,17 @@ public class ProjectCatController {
     }
 
     @GetMapping("/active")
-    public ResponseEntity<Message> getActiveCustomers() {
+    public ResponseEntity<Message> getActiveCategories() {
         return pcategoriesService.findActiveCustomers();
     }
 
     @PostMapping("/save")
-    public ResponseEntity<Message> saveCustomers(@Validated(ProjectCatDTO.Register.class) @RequestBody ProjectCatDTO dto) {
+    public ResponseEntity<Message> saveCategories(@Validated(ProjectCatDTO.Register.class) @RequestBody ProjectCatDTO dto) {
         return pcategoriesService.save(dto);
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Message> updateCustomers(@Validated(ProjectCatDTO.Modify.class) @RequestBody ProjectCatDTO dto) {
+    public ResponseEntity<Message> updateCategories(@Validated(ProjectCatDTO.Modify.class) @RequestBody ProjectCatDTO dto) {
         return pcategoriesService.update(dto);
     }
 

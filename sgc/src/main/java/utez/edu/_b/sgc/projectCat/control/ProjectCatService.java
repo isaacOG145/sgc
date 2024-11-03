@@ -41,9 +41,6 @@ public class ProjectCatService {
         if (dto.getDescription().length() > 100) {
             throw new IllegalArgumentException("La descripcion excede 500 caracteres");
         }
-        if (!dto.getDescription().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$")) {
-            throw new IllegalArgumentException("No se permiten caracteres especiales");
-        }
 
     }
 

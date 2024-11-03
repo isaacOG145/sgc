@@ -11,17 +11,16 @@ public class CustomerDto {
     private Long id;
 
     @NotBlank(groups = {Modify.class, Register.class}, message = "El campo nombre no puede estar vacio")
-    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$",
+    @Pattern(groups = {Modify.class, Register.class},regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$",
             message = "El nombre no puede contener caracteres especiales")
     private String name;
-
 
     @Email(groups = {Modify.class, Register.class},message = "Debe ser un correo electrónico válido")
     @NotBlank(groups = {Modify.class, Register.class},message = "El correo no puede estar vacío")
     private String email;
 
     @NotBlank(groups = {Modify.class, Register.class}, message = "El campo teléfono no puede estar vacío")
-    @Pattern(regexp = "^[0-9]+$", message = "El teléfono solo puede contener números")
+    @Pattern(groups = {Modify.class, Register.class},regexp = "^[0-9]+$", message = "El teléfono solo puede contener números")
     private String phone;
 
     public CustomerDto() {}

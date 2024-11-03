@@ -36,9 +36,7 @@ public class CustomerService {
         if (dto.getName().length() > 100) {
             throw new IllegalArgumentException("El nombre excede 100 caracteres");
         }
-        if (!dto.getName().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$")) {
-            throw new IllegalArgumentException("No se permiten caracteres especiales");
-        }
+
         if (dto.getEmail().length() > 100) {
             throw new IllegalArgumentException("El correo excede 100 caracteres");
         }

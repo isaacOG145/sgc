@@ -11,12 +11,12 @@ public class ProjectCatDTO {
     private Long id;
 
     @NotBlank(groups = {Modify.class, Register.class}, message = "El campo nombre no puede estar vacio")
-    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$",
+    @Pattern(groups = {Modify.class, Register.class},regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$",
             message = "El nombre no puede contener caracteres especiales")
     private String name;
 
     @NotBlank(groups = {Modify.class, Register.class}, message = "El campo descripcion no puede estar vacio")
-    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$",
+    @Pattern(groups = {Modify.class, Register.class}, regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$",
             message = "La descripcion no puede contener caracteres especiales")
     private String description;
 

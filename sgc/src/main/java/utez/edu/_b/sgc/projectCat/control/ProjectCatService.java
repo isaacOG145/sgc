@@ -20,7 +20,7 @@ import java.util.List;
 
 @Transactional
 @Service
-public class ProjectCatService {
+public class  ProjectCatService {
     private static final Logger logger = LoggerFactory.getLogger(ProjectCatService.class);
 
     private final ProjectCatRepository pcategoriesRepository;
@@ -39,7 +39,7 @@ public class ProjectCatService {
             throw new IllegalArgumentException("No se permiten caracteres especiales");
         }
         if (dto.getDescription().length() > 100) {
-            throw new IllegalArgumentException("La descripcion excede 500 caracteres");
+            throw new IllegalArgumentException("La descripcion excede 100 caracteres");
         }
 
     }

@@ -2,6 +2,7 @@ package utez.edu._b.sgc.users.model;
 
 import jakarta.validation.constraints.*;
 import utez.edu._b.sgc.customer.model.CustomerDto;
+import utez.edu._b.sgc.role.model.Role;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,9 +22,6 @@ public class UserDto {
             message = "El apellido no puede contener caracteres especiales")
     private String lastName;
 
-    @NotBlank(groups = {Modify.class, Register.class}, message = "El campo nombre de usuario no puede estar vacio")
-    private String userName;
-
     @NotBlank(groups = {Modify.class, Register.class},message = "El correo electrónico es obligatorio")
     @Email(groups = {Modify.class, Register.class},message = "El correo electrónico debe ser válido")
     private String email;
@@ -38,7 +36,7 @@ public class UserDto {
     private String password;
 
     @NotNull(groups = {Modify.class,ChangeStatus.class},message = "El rol no puede ser nulo")
-    private Set<Long> roleIds = new HashSet<>();
+    private Set<Role> roleIds = new HashSet<>();
 
     public UserDto() {
     }
@@ -67,10 +65,6 @@ public class UserDto {
         this.lastName = lastName;
     }
 
-    public String getUserName() { return userName; }
-
-    public void setUserName(String userName) { this.userName = userName; }
-
     public String getEmail() {
         return email;
     }
@@ -95,11 +89,11 @@ public class UserDto {
         this.password = password;
     }
 
-    public Set<Long> getRoleIds() {
+    public Set<Role> getRoleIds() {
         return roleIds;
     }
 
-    public void setRoleIds(Set<Long> roleIds) {
+    public void setRoleIds(Set<Role> roleIds) {
         this.roleIds = roleIds;
     }
 

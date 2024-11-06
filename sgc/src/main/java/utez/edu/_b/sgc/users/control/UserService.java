@@ -46,9 +46,6 @@ public class UserService {
         if(dto.getLastName().length() > 100) {
             throw new IllegalArgumentException("El apellido excede 100 caracteres");
         }
-        if(dto.getUserName().length() > 30) {
-            throw new IllegalArgumentException("El nombre excede 30 caracteres");
-        }
         if (dto.getEmail().length() > 100 ){
             throw new IllegalArgumentException("El email excede 100 caracteres");
         }
@@ -83,12 +80,11 @@ public class UserService {
             User newUser = new User(
                     dto.getName(),
                     dto.getLastName(),
-                    dto.getUserName(),
                     dto.getEmail(),
                     dto.getPhoneNumber(),
                     dto.getPassword(),
+                    dto.getRoleIds(),
                     true
-                    //roles queda pendiente
                     );
             newUser = userRepository.saveAndFlush(newUser);
 

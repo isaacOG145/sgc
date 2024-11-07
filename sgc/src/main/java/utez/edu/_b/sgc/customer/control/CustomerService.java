@@ -16,7 +16,6 @@ import utez.edu._b.sgc.utils.TypesResponse;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Optional;
 
 @Transactional
 @Service
@@ -36,9 +35,6 @@ public class CustomerService {
         if (dto.getName().length() > 100) {
             throw new IllegalArgumentException("El nombre excede 100 caracteres");
         }
-        if (!dto.getName().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$")) {
-            throw new IllegalArgumentException("No se permiten caracteres especiales");
-        }
         if (dto.getEmail().length() > 100) {
             throw new IllegalArgumentException("El correo excede 100 caracteres");
         }
@@ -55,7 +51,7 @@ public class CustomerService {
         return new ResponseEntity<>(new Message(customers,"Lista de clientes", TypesResponse.SUCCESS), HttpStatus.OK);
     }
 
-    //Emcontrar todos los activos
+    //Encontrar todos los activos
     @Transactional(readOnly = true)
     public ResponseEntity<Message> findActiveCustomers() {
         List<Customer> activeCustomers = customerRepository.findByStatus(true);
@@ -121,6 +117,5 @@ public class CustomerService {
             return new ResponseEntity<>(new Message("Intentelo denuevo mas tarde", TypesResponse.ERROR), HttpStatus.BAD_REQUEST);
         }
     }
-
 
 }

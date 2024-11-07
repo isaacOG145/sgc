@@ -1,11 +1,11 @@
-package utez.edu._b.sgc.customer.model;
+package utez.edu._b.sgc.projectCat.model;
 
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
-public class CustomerDto {
+public class ProjectCatDTO {
+
 
     @NotNull(groups = {Modify.class,ChangeStatus.class},message = "El id no puede ser nulo")
     private Long id;
@@ -15,15 +15,13 @@ public class CustomerDto {
             message = "El nombre no puede contener caracteres especiales")
     private String name;
 
-    @Email(groups = {Modify.class, Register.class},message = "Debe ser un correo electrónico válido")
-    @NotBlank(groups = {Modify.class, Register.class},message = "El correo no puede estar vacío")
-    private String email;
+    @NotBlank(groups = {Modify.class, Register.class}, message = "El campo descripcion no puede estar vacio")
+    @Pattern(groups = {Modify.class, Register.class}, regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$",
+            message = "La descripcion no puede contener caracteres especiales")
+    private String description;
 
-    @NotBlank(groups = {Modify.class, Register.class}, message = "El campo teléfono no puede estar vacío")
-    @Pattern(groups = {Modify.class, Register.class},regexp = "^[0-9]+$", message = "El teléfono solo puede contener números")
-    private String phone;
 
-    public CustomerDto() {}
+    public ProjectCatDTO() {}
 
     public Long getId() {
         return id;
@@ -33,13 +31,8 @@ public class CustomerDto {
         return this.name;
     }
 
-
-    public String getEmail() {
-        return this.email;
-    }
-
-    public String getPhone() {
-        return this.phone;
+    public String getDescription() {
+        return this.description;
     }
 
     public void setId(Long id) {
@@ -50,13 +43,8 @@ public class CustomerDto {
         this.name = name;
     }
 
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public interface Register{}

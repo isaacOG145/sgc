@@ -27,5 +27,53 @@ public class ProjectCategory {
     @JsonIgnore
     private Project project;
 
+    public ProjectCategory() {
+    }
+
+    public ProjectCategory(String name, String description, boolean status) {
+        this.name = name;
+        this.description = description;
+        this.status = status;
+    }
+
+    public ProjectCategory(int idProjectCategory, String name, String description, boolean status) {
+        this.idProjectCategory = idProjectCategory;
+        this.name = name;
+        this.description = description;
+        this.status = status;
+    }
+
+    public int getId() {
+        return idProjectCategory;
+    }
+
+    public void setId(int id) {
+        this.idProjectCategory = idProjectCategory;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
 
 }

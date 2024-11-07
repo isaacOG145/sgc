@@ -5,8 +5,6 @@ import jakarta.persistence.*;
 import utez.edu._b.sgc.customer.model.Customer;
 import utez.edu._b.sgc.projectCat.model.ProjectCategory;
 
-import java.util.List;
-
 @Entity
 @Table (name = "project")
 public class Project {
@@ -37,7 +35,16 @@ public class Project {
 
     public Project() {}
 
-    public Project(int id_project, String name, String abbreviation, String description, boolean status, Customer customer, ProjectCategory project_category) {
+    public Project(String name, String abbreviation, String description, Customer customer, ProjectCategory project_category, boolean status) {
+        this.name = name;
+        this.abbreviation = abbreviation;
+        this.description = description;
+        this.customer = customer;
+        this.project_category = project_category;
+        this.status = status;
+    }
+
+    public Project(int id_project, String name, String abbreviation, String description, Customer customer, ProjectCategory project_category, boolean status) {
         this.id_project = id_project;
         this.name = name;
         this.abbreviation = abbreviation;

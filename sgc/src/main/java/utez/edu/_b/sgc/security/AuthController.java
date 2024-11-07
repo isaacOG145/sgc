@@ -30,12 +30,12 @@ public class AuthController {
     public String login(@RequestBody AuthRequest authRequest) throws Exception {
         try {
             authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
+                    new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword()));
         } catch (BadCredentialsException e) {
             throw new Exception("Usuario o contraseña incorrectos", e);
         }
 
-        final UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getUsername());
+        final UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getEmail());
         final String jwt = jwtUtil.generateToken(userDetails);
 
         return jwt;

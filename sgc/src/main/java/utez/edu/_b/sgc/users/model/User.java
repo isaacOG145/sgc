@@ -19,8 +19,6 @@ public class User {
     private String name;
     @Column(name = "last_name", columnDefinition = "VARCHAR(100)")
     private String lastName;
-    @Column(nullable = false, unique = true)
-    private String userName;
     @Column(name = "email", columnDefinition = "VARCHAR(100)")
     private String email;
     @Column(name ="phone_number", columnDefinition = "VARCHAR(10)")
@@ -48,13 +46,13 @@ public class User {
         this.password = password;
     }
 
-    public User(String name, String lastName,String userName, String email,String phoneNumber, String password, boolean status) {
+    public User(String name, String lastName, String email,String phoneNumber, String password,Set<Role> roles ,  boolean status) {
         this.name = name;
         this.lastName = lastName;
-        this.userName = userName;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.password = password;
+        this.roles = roles;
         this.status = status;
     }
 
@@ -69,8 +67,6 @@ public class User {
     public String getLastName() {
         return lastName;
     }
-
-    public String getUserName() {return userName;}
 
     public String getEmail() {
         return email;
@@ -103,8 +99,6 @@ public class User {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
-    public void setUserName(String userName) {this.userName = userName;}
 
     public void setEmail(String email) {
         this.email = email;

@@ -70,9 +70,23 @@ public class CustomerServiceTest {
         ResponseEntity<Message> response = customerService.save(dto);
 
         assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
-
         assertEquals("Debe ser un correo electrónico válido", response.getBody().getText());
+        assertEquals(TypesResponse.ERROR, response.getBody().getType());
+    }
 
+    //guardar un cliente con telefono invalido
+    @Test
+    public void testCP003() {
+
+        CustomerDto dto = new CustomerDto();
+        dto.setName("Ivan");
+        dto.setEmail("ivan@example.com");
+        dto.setPhone("telefono");
+
+        ResponseEntity<Message> response = customerService.save(dto);
+        
+        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+        assertEquals("El teléfono solo puede contener números", response.getBody().getText());
         assertEquals(TypesResponse.ERROR, response.getBody().getType());
     }
 

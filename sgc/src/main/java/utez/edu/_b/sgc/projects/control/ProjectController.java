@@ -34,7 +34,7 @@ public class ProjectController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Message> updateCustomers(@Validated(ProjectDto.Modify.class) @RequestBody ProjectDto dto) {
+    public ResponseEntity<Message> updateProjects(@Validated(ProjectDto.Modify.class) @RequestBody ProjectDto dto) {
         return projectService.update(dto);
     }
 

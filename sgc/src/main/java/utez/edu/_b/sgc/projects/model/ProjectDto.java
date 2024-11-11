@@ -26,6 +26,8 @@ public class ProjectDto {
     @NotNull(groups = {Register.class, Modify.class}, message = "La categoria del proyecto no puede ser nulo")
     private ProjectCategory projectCategory;
 
+    private boolean status;
+
     public ProjectDto() {}
 
     public void setId(Long id) {
@@ -52,6 +54,7 @@ public class ProjectDto {
         this.projectCategory = projectCategory;
     }
 
+    public void setStatus(boolean status) { this.status = status; }
     public Long getId() {
         return this.id;
     }
@@ -74,6 +77,10 @@ public class ProjectDto {
 
     public ProjectCategory getProjectCategory() {
         return this.projectCategory;
+    }
+
+    public boolean isStatus() {
+        return status;
     }
 
     public interface Register{}

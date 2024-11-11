@@ -30,6 +30,8 @@ public class SecurityConfig {
                         .requestMatchers("/login", "/register").permitAll()
                         //aqui meteremos validaciones despues
                         .requestMatchers("/customers/**").permitAll()
+                        .requestMatchers("/projectCat/**").permitAll()
+                        .requestMatchers("/projects/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

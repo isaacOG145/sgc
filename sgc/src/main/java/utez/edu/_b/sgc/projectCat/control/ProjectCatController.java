@@ -27,7 +27,7 @@ public class ProjectCatController {
 
     @GetMapping("/active")
     public ResponseEntity<Message> getActiveCategories() {
-        return pcategoriesService.findActiveCustomers();
+        return pcategoriesService.findActive();
     }
 
     @PostMapping("/save")

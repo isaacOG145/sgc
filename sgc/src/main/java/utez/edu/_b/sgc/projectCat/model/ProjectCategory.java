@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import utez.edu._b.sgc.projects.model.Project;
 
+import java.util.List;
+
 @Entity
 @Table (name = "project_category")
 public class ProjectCategory {
@@ -11,7 +13,7 @@ public class ProjectCategory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "id_project_category")
-    private int idProjectCategory;
+    private Long idProjectCategory;
 
     @Column(name = "name", columnDefinition = "VARCHAR(50)")
     private String name;
@@ -23,11 +25,15 @@ public class ProjectCategory {
     private boolean status;
 
 
-    @OneToOne(mappedBy = "project_category")
+    @OneToMany(mappedBy = "project_category")
     @JsonIgnore
-    private Project project;
+    private List<Project> project;
 
     public ProjectCategory() {
+    }
+
+    public ProjectCategory(Long id) {
+        this.idProjectCategory = id;
     }
 
     public ProjectCategory(String name, String description, boolean status) {
@@ -36,18 +42,18 @@ public class ProjectCategory {
         this.status = status;
     }
 
-    public ProjectCategory(int idProjectCategory, String name, String description, boolean status) {
+    public ProjectCategory(Long idProjectCategory, String name, String description, boolean status) {
         this.idProjectCategory = idProjectCategory;
         this.name = name;
         this.description = description;
         this.status = status;
     }
 
-    public int getId() {
+    public long getId() {
         return idProjectCategory;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.idProjectCategory = idProjectCategory;
     }
 

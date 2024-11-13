@@ -27,7 +27,7 @@ public class Project {
     @JsonIgnore
     private Customer customer;
 
-    @OneToOne
+    @ManyToOne
     private ProjectCategory project_category;
 
     @Column(name = "status",columnDefinition = "BOOL DEFAULT TRUE")

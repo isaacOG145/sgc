@@ -6,7 +6,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import utez.edu._b.sgc.customer.model.Customer;
+import utez.edu._b.sgc.customer.model.CustomerRepository;
 import utez.edu._b.sgc.projectCat.model.ProjectCatDTO;
+import utez.edu._b.sgc.projectCat.model.ProjectCatRepository;
 import utez.edu._b.sgc.projectCat.model.ProjectCategory;
 import utez.edu._b.sgc.projects.model.Project;
 import utez.edu._b.sgc.projects.model.ProjectDto;
@@ -24,9 +27,18 @@ public class ProjectService {
     private static final Logger logger = LoggerFactory.getLogger(ProjectService.class);
 
     private final ProjectRepository projectRepository;
+    private final CustomerRepository customerRepository;
+    private final ProjectCatRepository projectCategoryRepository;
 
-    public ProjectService(ProjectRepository projectRepository) {
+    public ProjectService(
+            ProjectRepository projectRepository,
+            CustomerRepository customerRepository,
+            ProjectCatRepository projectCategoryRepository
+    ) {
+
         this.projectRepository = projectRepository;
+        this.customerRepository = customerRepository;
+        this.projectCategoryRepository = projectCategoryRepository;
     }
 
     //validar datos
@@ -49,6 +61,22 @@ public class ProjectService {
         }
         if (!dto.getDescription().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$")) {
             throw new IllegalArgumentException("La descripción contiene caracteres especiales");
+        }
+    }
+
+    private void validateCustomerIsActive(Long customerId) {
+        Customer customer = customerRepository.findById(customerId)
+                .orElseThrow(() -> new IllegalArgumentException("Cliente no encontrado"));
+        if (!customer.isStatus()) {
+            throw new IllegalArgumentException("El cliente no está activo");
+        }
+    }
+
+    private void validateProjectCategoryIsActive(Long projectCategoryId) {
+        ProjectCategory projectCategory = projectCategoryRepository.findById(projectCategoryId)
+                .orElseThrow(() -> new IllegalArgumentException("Categoría de proyecto no encontrada"));
+        if (!projectCategory.isStatus()) {
+            throw new IllegalArgumentException("La categoría de proyecto no está activa");
         }
     }
 
@@ -84,7 +112,13 @@ public class ProjectService {
     @Transactional(rollbackFor = {SQLException.class})
     public ResponseEntity<Message> save(ProjectDto dto) {
         try {
-            validateProjectData(dto); // Llama al método de validación
+            validateProjectData(dto); // Llama al método de validación de datos
+
+            // Validar que el cliente esté activo
+            validateCustomerIsActive(dto.getCustomerId());
+
+            // Validar que la categoría del proyecto esté activa
+            validateProjectCategoryIsActive(dto.getProjectCategoryId());
 
             if (projectRepository.existsByName(dto.getName())) {
                 return new ResponseEntity<>(new Message("El nombre del proyecto ya existe", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
@@ -93,12 +127,14 @@ public class ProjectService {
                 return new ResponseEntity<>(new Message("La abreviación del proyecto ya existe", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
             }
 
+            // Crear un nuevo proyecto
             Project newProject = new Project(
                     dto.getName(),
                     dto.getAbbreviation(),
                     dto.getDescription(),
-                    dto.getCustomer(),
-                    dto.getProjectCategory(), true);
+                    new Customer(dto.getCustomerId()),
+                    new ProjectCategory(dto.getProjectCategoryId()),
+                    true);
 
             newProject = projectRepository.saveAndFlush(newProject);
 
@@ -112,13 +148,17 @@ public class ProjectService {
     }
 
 
-    //actualizar proyecto
+    // Actualizar proyecto
     @Transactional(rollbackFor = {SQLException.class})
     public ResponseEntity<Message> update(ProjectDto dto) {
         Project project = projectRepository.findById(dto.getId())
                 .orElseThrow(() -> new RuntimeException("El proyecto no existe"));
 
-        validateProjectData(dto); // Llama al método de validación
+        validateProjectData(dto);
+
+        validateCustomerIsActive(dto.getCustomerId());
+
+        validateProjectCategoryIsActive(dto.getProjectCategoryId());
 
         if (!project.getName().equals(dto.getName()) && projectRepository.existsByName(dto.getName())) {
             return new ResponseEntity<>(new Message("El nombre del proyecto ya existe", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
@@ -130,11 +170,10 @@ public class ProjectService {
         project.setName(dto.getName());
         project.setAbbreviation(dto.getAbbreviation());
         project.setDescription(dto.getDescription());
-        project.setCustomer(dto.getCustomer());
-        project.setProjectCategory(dto.getProjectCategory());
+        project.setCustomer(new Customer(dto.getCustomerId()));
+        project.setProjectCategory(new ProjectCategory(dto.getProjectCategoryId()));
 
         try {
-
             project = projectRepository.saveAndFlush(project);
             return new ResponseEntity<>(new Message(project, "Proyecto actualizado exitosamente", TypesResponse.SUCCESS), HttpStatus.OK);
         } catch (Exception e) {

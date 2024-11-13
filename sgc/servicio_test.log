@@ -3103,3 +3103,38 @@ org.springframework.transaction.UnexpectedRollbackException: Transaction silentl
 2024-11-12T23:39:48.178-06:00  INFO 31760 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-11-12T23:39:48.179-06:00  INFO 31760 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-11-12T23:39:48.183-06:00  INFO 31760 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-12T23:40:03.504-06:00  INFO 27192 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 21.0.5 with PID 27192 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc)
+2024-11-12T23:40:03.505-06:00  INFO 27192 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-11-12T23:40:03.854-06:00  INFO 27192 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-12T23:40:03.890-06:00  INFO 27192 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 5 JPA repository interfaces.
+2024-11-12T23:40:04.178-06:00  INFO 27192 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-12T23:40:04.185-06:00  INFO 27192 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-12T23:40:04.185-06:00  INFO 27192 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-12T23:40:04.215-06:00  INFO 27192 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-12T23:40:04.215-06:00  INFO 27192 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 682 ms
+2024-11-12T23:40:04.279-06:00  INFO 27192 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-12T23:40:04.309-06:00  INFO 27192 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-12T23:40:04.326-06:00  INFO 27192 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-12T23:40:04.489-06:00  INFO 27192 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-12T23:40:04.505-06:00  INFO 27192 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-12T23:40:04.705-06:00  INFO 27192 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b09d1c3
+2024-11-12T23:40:04.706-06:00  INFO 27192 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-12T23:40:04.737-06:00  WARN 27192 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-12T23:40:04.737-06:00  WARN 27192 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-11-12T23:40:05.285-06:00  INFO 27192 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-12T23:40:05.504-06:00  INFO 27192 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-12T23:40:05.749-06:00  INFO 27192 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2024-11-12T23:40:05.764-06:00  WARN 27192 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-12T23:40:06.039-06:00  INFO 27192 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-12T23:40:06.044-06:00  INFO 27192 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Started SgcApplication in 2.766 seconds (process running for 3.139)
+2024-11-12T23:40:26.216-06:00  INFO 27192 --- [sgc] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-12T23:40:26.216-06:00  INFO 27192 --- [sgc] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-12T23:40:26.217-06:00  INFO 27192 --- [sgc] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-12T23:40:30.534-06:00  INFO 27192 --- [sgc] [http-nio-8080-exec-3] u.e._.s.c.control.CustomerService        : No se encontraron clientes.
+2024-11-12T23:41:32.826-06:00  WARN 27192 --- [sgc] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-11-12T23:41:46.279-06:00  INFO 27192 --- [sgc] [http-nio-8080-exec-8] u.e._.s.c.control.CustomerService        : La búsqueda ha sido realizada correctamente
+2024-11-12T23:42:47.154-06:00  INFO 27192 --- [sgc] [http-nio-8080-exec-1] u.e._.s.p.control.ProjectCatService      : No se encontraron categorías de proyectos.
+2024-11-12T23:43:26.064-06:00  WARN 27192 --- [sgc] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name]
+2024-11-12T23:43:38.780-06:00  INFO 27192 --- [sgc] [http-nio-8080-exec-4] u.e._.s.p.control.ProjectCatService      : La búsqueda ha sido realizada correctamente
+2024-11-12T23:43:46.535-06:00  INFO 27192 --- [sgc] [http-nio-8080-exec-5] u.e._.s.projects.control.ProjectService  : No se encontraron proyectos
+2024-11-12T23:45:30.601-06:00  INFO 27192 --- [sgc] [http-nio-8080-exec-10] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente

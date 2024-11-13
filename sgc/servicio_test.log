@@ -3138,3 +3138,6 @@ org.springframework.transaction.UnexpectedRollbackException: Transaction silentl
 2024-11-12T23:43:38.780-06:00  INFO 27192 --- [sgc] [http-nio-8080-exec-4] u.e._.s.p.control.ProjectCatService      : La búsqueda ha sido realizada correctamente
 2024-11-12T23:43:46.535-06:00  INFO 27192 --- [sgc] [http-nio-8080-exec-5] u.e._.s.projects.control.ProjectService  : No se encontraron proyectos
 2024-11-12T23:45:30.601-06:00  INFO 27192 --- [sgc] [http-nio-8080-exec-10] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-11-12T23:47:43.386-06:00  INFO 27192 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-12T23:47:43.388-06:00  INFO 27192 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-12T23:47:43.391-06:00  INFO 27192 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

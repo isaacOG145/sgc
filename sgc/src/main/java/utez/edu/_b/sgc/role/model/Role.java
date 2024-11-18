@@ -1,10 +1,6 @@
 package utez.edu._b.sgc.role.model;
 
 import jakarta.persistence.*;
-import utez.edu._b.sgc.users.model.User;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "roles")
@@ -18,15 +14,13 @@ public class Role {
     @Column(nullable = false, unique = true)
     private String name;
 
-    @ManyToMany(mappedBy = "roles")
-    private Set<User> users = new HashSet<>();
-
     public Role() {}
 
     public Role(String name) {
         this.name = name;
     }
 
+    // Getter y Setter
     public Long getId() {
         return id;
     }
@@ -43,11 +37,7 @@ public class Role {
         this.name = name;
     }
 
-    public Set<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
+    // Crear los roles como constantes
+    public static final String ADMIN = "ADMIN";
+    public static final String USER = "USER";
 }

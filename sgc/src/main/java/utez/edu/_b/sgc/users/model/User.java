@@ -3,9 +3,6 @@ import jakarta.persistence.*;
 import utez.edu._b.sgc.role.model.Role;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
 
 @Entity
 @Table(name = "users")
@@ -15,47 +12,54 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private Long id;
+
     @Column(name = "name", columnDefinition = "VARCHAR(50)")
     private String name;
+
     @Column(name = "last_name", columnDefinition = "VARCHAR(100)")
     private String lastName;
+
     @Column(name = "email", columnDefinition = "VARCHAR(100)")
     private String email;
+
     @Column(name ="phone_number", columnDefinition = "VARCHAR(10)")
     private String phoneNumber;
+
     @Column(name = "password", columnDefinition = "VARCHAR(255)")
     private String password;
+
     @Column(name = "status", columnDefinition = "BOOL DEFAULT TRUE")
     private boolean status;
+
     @Column(name = "create_at", insertable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "user_roles",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id")
-    )
-    private Set<Role> roles = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;  // Ahora cada usuario tiene un solo rol
 
-    public User(){}
+    public User() {}
 
-    public User (String userName,String password) {
-        this.email = userName;
-        this.password = password;
-    }
-
-    public User(String name, String lastName, String email,String phoneNumber, String password,Set<Role> roles ,  boolean status) {
+    public User(String name, String lastName, String email, String phoneNumber, String password) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.password = password;
-        this.roles = roles;
+    }
+
+    public User(String name, String lastName, String email, String phoneNumber, String password, Role role, boolean status) {
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.password = password;
+        this.role = role;
         this.status = status;
     }
 
+    // Getters y Setters
     public Long getId() {
         return id;
     }
@@ -84,8 +88,8 @@ public class User {
         return status;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+    public Role getRole() {
+        return role;
     }
 
     public void setId(Long id) {
@@ -116,7 +120,10 @@ public class User {
         this.status = status;
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public void setRole(Role role) {
+        this.role = role;
     }
 }
+
+
+

@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import utez.edu._b.sgc.security.dto.AuthRequest;
+import utez.edu._b.sgc.security.dto.AuthResponse;
+import utez.edu._b.sgc.users.model.User;
 
 @RestController
 public class AuthController {
@@ -27,7 +29,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody AuthRequest authRequest) throws Exception {
+    public AuthResponse login(@RequestBody AuthRequest authRequest) throws Exception {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword()));
@@ -35,9 +37,16 @@ public class AuthController {
             throw new Exception("Usuario o contraseña incorrectos", e);
         }
 
-        final UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getEmail());
-        final String jwt = jwtUtil.generateToken(userDetails);
+        // Cargar los detalles del usuario
+        UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getEmail());
 
-        return jwt;
+        // Generar el JWT
+        String jwt = jwtUtil.generateToken(userDetails);
+
+        // Obtener la fecha de expiración del JWT usando el método getExpirationTime
+        long expiration = jwtUtil.getExpirationTime(); // Aquí usas el nuevo método
+
+        // Devolver el AuthResponse con la información relevante
+        return new AuthResponse(jwt, ((User) userDetails).getId(), userDetails.getUsername(), expiration);
     }
 }

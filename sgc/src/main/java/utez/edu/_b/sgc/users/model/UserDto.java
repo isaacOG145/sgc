@@ -1,42 +1,32 @@
 package utez.edu._b.sgc.users.model;
 
 import jakarta.validation.constraints.*;
-import utez.edu._b.sgc.customer.model.CustomerDto;
 import utez.edu._b.sgc.role.model.Role;
-
-import java.util.HashSet;
-import java.util.Set;
 
 public class UserDto {
 
-    @NotNull(groups = {Modify.class,ChangeStatus.class},message = "El id no puede ser nulo")
+    @NotNull(groups = {Modify.class, ChangeStatus.class}, message = "El id no puede ser nulo")
     private Long id;
 
-    @NotBlank(groups = {Modify.class, Register.class}, message = "El campo nombre no puede estar vacio")
-    @Pattern(groups = {Modify.class, Register.class},regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$",
-            message = "El nombre no puede contener caracteres especiales")
+    @NotBlank(groups = {Modify.class, Register.class}, message = "El campo nombre no puede estar vacío")
     private String name;
 
-    @NotBlank(groups = {Modify.class,Register.class}, message = "El campo apellido no puede estar vacio")
-    @Pattern(groups = {Modify.class, Register.class},regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$",
-            message = "El apellido no puede contener caracteres especiales")
+    @NotBlank(groups = {Modify.class, Register.class}, message = "El campo apellido no puede estar vacío")
     private String lastName;
 
-    @NotBlank(groups = {Modify.class, Register.class},message = "El correo electrónico es obligatorio")
-    @Email(groups = {Modify.class, Register.class},message = "El correo electrónico debe ser válido")
+    @NotBlank(groups = {Modify.class, Register.class}, message = "El correo electrónico es obligatorio")
     private String email;
 
-    @NotBlank(groups = {Modify.class, Register.class},message = "El teléfono es obligatorio")
-    @Pattern(groups = {Modify.class, Register.class},regexp = "^[0-9]+$", message = "El teléfono debe contener solo números")
-    @Size(groups = {Modify.class, Register.class}, min = 10, max = 10, message = "El teléfono debe tener 10 dígitos")
+    @NotBlank(groups = {Modify.class, Register.class}, message = "El teléfono es obligatorio")
     private String phoneNumber;
 
-    @NotBlank(groups = {Modify.class, Register.class},message = "La contraseña es obligatoria")
-    @Size(groups = {Modify.class, Register.class},min = 8, message = "La contraseña debe tener al menos 8 caracteres")
+    @NotBlank(groups = {Modify.class, Register.class}, message = "La contraseña es obligatoria")
     private String password;
 
-    @NotNull(groups = {Modify.class,ChangeStatus.class},message = "El rol no puede ser nulo")
-    private Set<Role> roleIds = new HashSet<>();
+    @NotNull(groups = {Modify.class, Register.class}, message = "El rol no puede ser nulo")
+    private Role role;
+
+    private boolean status;
 
     public UserDto() {
     }
@@ -89,12 +79,20 @@ public class UserDto {
         this.password = password;
     }
 
-    public Set<Role> getRoleIds() {
-        return roleIds;
+    public Role getRole() {
+        return role;
     }
 
-    public void setRoleIds(Set<Role> roleIds) {
-        this.roleIds = roleIds;
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
     public interface Register {
@@ -105,5 +103,4 @@ public class UserDto {
 
     public interface ChangeStatus {
     }
-
 }

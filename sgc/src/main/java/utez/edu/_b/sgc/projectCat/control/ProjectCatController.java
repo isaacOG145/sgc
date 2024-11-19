@@ -10,6 +10,7 @@ import utez.edu._b.sgc.utils.Message;
 
 
 @RestController
+@CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 @RequestMapping("/projectCat")
 public class ProjectCatController {
 

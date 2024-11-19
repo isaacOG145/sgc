@@ -8,6 +8,7 @@ import utez.edu._b.sgc.projects.model.ProjectDto;
 import utez.edu._b.sgc.utils.Message;
 
 @RestController
+@CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 @RequestMapping("/projects")
 public class ProjectController {
 

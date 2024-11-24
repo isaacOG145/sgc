@@ -10,7 +10,7 @@ import utez.edu._b.sgc.utils.Message;
 
 @RestController
 @RequestMapping("/user")
-//@CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
+@CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 public class UserController {
 
     private final UserService userService;

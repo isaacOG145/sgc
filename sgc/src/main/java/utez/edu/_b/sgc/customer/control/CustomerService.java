@@ -40,10 +40,10 @@ public class CustomerService {
             throw new IllegalArgumentException("El correo no puede exceder los 100 caracteres");
         }
         if (!dto.getName().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$")) {
-            throw new IllegalArgumentException("El nombre solo puede contener letras y caracteres especiales permitidos (acentos, ñ y espacios)");
+            throw new IllegalArgumentException("El nombre no puede contener caracteres especiales");
         }
         if (!dto.getEmail().matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
-            throw new IllegalArgumentException("El correo debe tener un formato válido");
+            throw new IllegalArgumentException("El correo debe ser válido");
         }
         if (dto.getPhone().length() > 10) {
             throw new IllegalArgumentException("El número de teléfono no puede exceder los 10 caracteres");

@@ -48,35 +48,35 @@ public class ProjectService {
             throw new IllegalArgumentException("El nombre excede los 50 caracteres");
         }
         if (!dto.getName().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$")) {
-            throw new IllegalArgumentException("El nombre contiene caracteres especiales");
+            throw new IllegalArgumentException("El nombre no puede contener cáracteres especiales");
         }
         if (dto.getAbbreviation().length() > 10) {
             throw new IllegalArgumentException("La abreviación excede los 10 caracteres");
         }
         if (!dto.getAbbreviation().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$")) {
-            throw new IllegalArgumentException("La abreviación contiene caracteres especiales");
+            throw new IllegalArgumentException("La abreviación no puede contener cáracteres especiales");
         }
         if (dto.getDescription().length() > 255) {
             throw new IllegalArgumentException("La descripción excede los 255 caracteres");
         }
         if (!dto.getDescription().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$")) {
-            throw new IllegalArgumentException("La descripción contiene caracteres especiales");
+            throw new IllegalArgumentException("La descripción no puede contener cáracteres especiales");
         }
     }
 
     private void validateCustomerIsActive(Long customerId) {
         Customer customer = customerRepository.findById(customerId)
-                .orElseThrow(() -> new IllegalArgumentException("Cliente no encontrado"));
+                .orElseThrow(() -> new IllegalArgumentException("Proyecto no encontrado"));
         if (!customer.isStatus()) {
-            throw new IllegalArgumentException("El cliente no está activo");
+            throw new IllegalArgumentException("El proyecto no está activo");
         }
     }
 
     private void validateProjectCategoryIsActive(Long projectCategoryId) {
         ProjectCategory projectCategory = projectCategoryRepository.findById(projectCategoryId)
-                .orElseThrow(() -> new IllegalArgumentException("Categoría de proyecto no encontrada"));
+                .orElseThrow(() -> new IllegalArgumentException("Proyecto no encontrado"));
         if (!projectCategory.isStatus()) {
-            throw new IllegalArgumentException("La categoría de proyecto no está activa");
+            throw new IllegalArgumentException("El proyecto no está activo");
         }
     }
 

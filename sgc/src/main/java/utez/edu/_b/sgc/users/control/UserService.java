@@ -49,21 +49,20 @@ public class UserService {
         if (dto.getEmail().length() > 100) {
             throw new IllegalArgumentException("El email excede 100 caracteres");
         }
-        if (dto.getPhoneNumber().length() > 10) {
-            throw new IllegalArgumentException("El telefono excede 10 caracteres");
+        if (dto.getPhoneNumber().length() != 10) {
+            throw new IllegalArgumentException("El telefono debe tener 10 caracteres");
         }
         if (!dto.getName().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$")) {
-            throw new IllegalArgumentException("El nombre solo puede contener letras y caracteres especiales permitidos (acentos, ñ y espacios)");
+            throw new IllegalArgumentException("El nombre no puede contener cáracteres especiales");
         }
         if (!dto.getEmail().matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
-            throw new IllegalArgumentException("El correo debe tener un formato válido");
+            throw new IllegalArgumentException("El correo debe ser válido");
         }
         if (!dto.getPhoneNumber().matches("^[0-9]{10}$")) {
-            throw new IllegalArgumentException("El teléfono debe contener solo 10 dígitos numéricos");
+            throw new IllegalArgumentException("El teléfono debe contener solo dígitos numéricos");
         }
     }
 
-    //Encontrar todo
     @Transactional(readOnly = true)
     public ResponseEntity<Message> findAll() {
         List<User> users = userRepository.findAll();
@@ -75,10 +74,9 @@ public class UserService {
         return new ResponseEntity<>(new Message(users, "Lista de usuarios", TypesResponse.SUCCESS), HttpStatus.OK);
     }
 
-    // Encontrar todos los usuarios activos
     @Transactional(readOnly = true)
     public ResponseEntity<Message> findActiveUsers() {
-        List<User> activeUsers = userRepository.findByStatus(true); // Asumimos que tienes un método findByStatus en el repositorio
+        List<User> activeUsers = userRepository.findByStatus(true);
         if (activeUsers.isEmpty()) {
             logger.info("No se encontraron usuarios activos.");
             return new ResponseEntity<>(new Message("No se encontraron usuarios activos", TypesResponse.WARNING), HttpStatus.OK);
@@ -94,30 +92,25 @@ public class UserService {
         try {
             validateUserData(dto);
 
-            // Verificar si el correo ya está registrado
             if (userRepository.existsByEmail(dto.getEmail())) {
                 return new ResponseEntity<>(new Message("El correo electrónico ya está registrado", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
             }
 
-            // Verificar si el teléfono ya está registrado
             if (userRepository.existsByPhoneNumber(dto.getPhoneNumber())) {
                 return new ResponseEntity<>(new Message("El número de teléfono ya está registrado", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
             }
 
-            // Obtener el rol desde la base de datos
             Role role = roleRepository.findById(dto.getRole().getId())
                     .orElseThrow(() -> new IllegalArgumentException("El rol no existe"));
 
-            // Encriptar la contraseña antes de guardarla
             String encodedPassword = passwordEncoder.encode(dto.getPassword());
 
-            // Crear y guardar el nuevo usuario
             User newUser = new User(
                     dto.getName(),
                     dto.getLastName(),
                     dto.getEmail(),
                     dto.getPhoneNumber(),
-                    encodedPassword,  // Usar la contraseña encriptada
+                    encodedPassword,
                     role,
                     true
             );
@@ -132,7 +125,6 @@ public class UserService {
         }
     }
 
-    // Método para actualizar el usuario
     @Transactional(rollbackFor = {SQLException.class})
     public ResponseEntity<Message> update(UserDto dto) {
         try {
@@ -153,16 +145,15 @@ public class UserService {
             Role role = roleRepository.findById(dto.getRole().getId())
                     .orElseThrow(() -> new IllegalArgumentException("El rol no existe"));
 
-            // Encriptar la nueva contraseña si se proporciona (si no, mantener la antigua)
             String encodedPassword = dto.getPassword() != null && !dto.getPassword().isEmpty()
                     ? passwordEncoder.encode(dto.getPassword())
-                    : user.getPassword();  // Mantener la contraseña anterior si no se actualiza
+                    : user.getPassword();
 
             user.setName(dto.getName());
             user.setLastName(dto.getLastName());
             user.setEmail(dto.getEmail());
             user.setPhoneNumber(dto.getPhoneNumber());
-            user.setPassword(encodedPassword);  // Usar la contraseña encriptada
+            user.setPassword(encodedPassword);
             user.setRole(role);
 
             user = userRepository.saveAndFlush(user);
@@ -177,7 +168,6 @@ public class UserService {
     }
 
 
-    // Cambiar estado del usuario
     @Transactional(rollbackFor = {SQLException.class})
     public ResponseEntity<Message> changeStatus(UserDto dto) {
         User user = userRepository.findById(dto.getId())

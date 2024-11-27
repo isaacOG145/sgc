@@ -20,7 +20,7 @@ public class UserDto {
     @NotBlank(groups = {Modify.class, Register.class}, message = "El teléfono es obligatorio")
     private String phoneNumber;
 
-    @NotBlank(groups = {Modify.class, Register.class}, message = "La contraseña es obligatoria")
+    @NotBlank(groups = {Register.class}, message = "La contraseña es obligatoria")
     private String password;
 
     @NotNull(groups = {Modify.class, Register.class}, message = "El rol no puede ser nulo")

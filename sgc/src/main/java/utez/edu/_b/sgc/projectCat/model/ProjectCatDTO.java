@@ -12,7 +12,7 @@ public class ProjectCatDTO {
     @NotBlank(groups = {Modify.class, Register.class}, message = "El campo nombre no puede estar vacio")
     private String name;
 
-    @NotBlank(groups = {Modify.class, Register.class}, message = "El campo descripcion no puede estar vacio")
+    @NotBlank(groups = {Modify.class, Register.class}, message = "El campo descripción no puede estar vacio")
     private String description;
 
     private boolean status;

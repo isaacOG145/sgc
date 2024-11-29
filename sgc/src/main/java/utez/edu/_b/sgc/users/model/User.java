@@ -37,9 +37,14 @@ public class User {
 
     @ManyToOne
     @JoinColumn(name = "role_id")
-    private Role role;  // Ahora cada usuario tiene un solo rol
+    private Role role;
 
     public User() {}
+
+    public User (String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
 
     public User(String name, String lastName, String email, String phoneNumber, String password) {
         this.name = name;

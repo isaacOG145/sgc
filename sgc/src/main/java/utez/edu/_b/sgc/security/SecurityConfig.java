@@ -33,7 +33,7 @@ public class SecurityConfig {
                         .requestMatchers("/projectCat/**").permitAll()
                         .requestMatchers("/projects/**").permitAll()
                         .requestMatchers("/user/**").permitAll()
-                        .anyRequest().authenticated()
+                        .anyRequest().permitAll()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);

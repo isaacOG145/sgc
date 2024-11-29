@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import utez.edu._b.sgc.security.dto.AuthRequest;
 import utez.edu._b.sgc.security.dto.AuthResponse;
 import utez.edu._b.sgc.users.model.User;
+import utez.edu._b.sgc.users.model.UserRepository;
 
 @RestController
 public class AuthController {
@@ -20,16 +21,18 @@ public class AuthController {
     private final UserDetailsServiceImpl userDetailsService;
 
     private final JwtUtil jwtUtil;
+    private final UserRepository userRepository;
 
     @Autowired
-    public AuthController(AuthenticationManager authenticationManager, UserDetailsServiceImpl userDetailsService, JwtUtil jwtUtil) {
+    public AuthController(AuthenticationManager authenticationManager, UserDetailsServiceImpl userDetailsService, JwtUtil jwtUtil, UserRepository userRepository) {
         this.authenticationManager = authenticationManager;
         this.userDetailsService = userDetailsService;
         this.jwtUtil = jwtUtil;
+        this.userRepository = userRepository;
     }
 
     @PostMapping("/login")
-    public AuthResponse login(@RequestBody AuthRequest authRequest) throws Exception {
+    public AuthResponse  login(@RequestBody AuthRequest authRequest) throws Exception {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword()));
@@ -38,15 +41,17 @@ public class AuthController {
         }
 
         // Cargar los detalles del usuario
-        UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getEmail());
+        final UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getEmail());
 
         // Generar el JWT
-        String jwt = jwtUtil.generateToken(userDetails);
+        final String jwt = jwtUtil.generateToken(userDetails);
 
-        // Obtener la fecha de expiración del JWT usando el método getExpirationTime
-        long expiration = jwtUtil.getExpirationTime(); // Aquí usas el nuevo método
+        User user = userRepository.findByEmail(authRequest.getEmail())
+                .orElseThrow(() -> new Exception("Usuario no encontrado"));
 
-        // Devolver el AuthResponse con la información relevante
-        return new AuthResponse(jwt, ((User) userDetails).getId(), userDetails.getUsername(), expiration);
+        long expirationTime = jwtUtil.getExpirationTime();
+
+
+        return new AuthResponse(jwt, user.getId(), user.getEmail(), expirationTime);
     }
 }

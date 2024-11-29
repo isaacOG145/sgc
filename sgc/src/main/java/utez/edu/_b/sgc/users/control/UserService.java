@@ -64,6 +64,23 @@ public class UserService {
     }
 
     @Transactional(readOnly = true)
+    public ResponseEntity<Message> getUserById(Long userId) {
+        try {
+            User user = userRepository.findById(userId)
+                    .orElseThrow(() -> new EntityNotFoundException("Usuario no encontrado"));
+
+            // Si el usuario es encontrado, se responde con sus datos.
+            return new ResponseEntity<>(new Message(user, "Datos del usuario obtenidos exitosamente", TypesResponse.SUCCESS), HttpStatus.OK);
+        } catch (EntityNotFoundException e) {
+            logger.error("Usuario no encontrado", e);
+            return new ResponseEntity<>(new Message("Usuario no encontrado", TypesResponse.WARNING), HttpStatus.NOT_FOUND);
+        } catch (Exception e) {
+            logger.error("Error al obtener los datos del usuario", e);
+            return new ResponseEntity<>(new Message("Revise los datos e inténtelo de nuevo", TypesResponse.ERROR), HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @Transactional(readOnly = true)
     public ResponseEntity<Message> findAll() {
         List<User> users = userRepository.findAll();
         if (users.isEmpty()) {

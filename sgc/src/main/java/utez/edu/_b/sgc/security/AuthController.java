@@ -12,6 +12,7 @@ import utez.edu._b.sgc.security.dto.AuthRequest;
 import utez.edu._b.sgc.security.dto.AuthResponse;
 import utez.edu._b.sgc.users.model.User;
 import utez.edu._b.sgc.users.model.UserRepository;
+import utez.edu._b.sgc.utils.Message;
 
 @RestController
 public class AuthController {
@@ -32,12 +33,12 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public AuthResponse  login(@RequestBody AuthRequest authRequest) throws Exception {
+    public AuthResponse login(@RequestBody AuthRequest authRequest) throws Exception {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword()));
         } catch (BadCredentialsException e) {
-            throw new Exception("Usuario o contraseña incorrectos", e);
+            throw new Exception("Correo o contraseña incorrectos", e);
         }
 
         // Cargar los detalles del usuario

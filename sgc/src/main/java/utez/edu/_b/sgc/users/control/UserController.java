@@ -20,6 +20,11 @@ public class UserController {
         this.userService = userService;
     }
 
+    @GetMapping("/{userId}")
+    public ResponseEntity<Message> getUserById(@PathVariable Long userId) {
+        return userService.getUserById(userId);
+    }
+
     @GetMapping("/all")
     public ResponseEntity<Message> getAllUsers() {
         return userService.findAll();

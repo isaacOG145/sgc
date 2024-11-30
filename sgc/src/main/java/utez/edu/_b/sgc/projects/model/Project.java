@@ -24,7 +24,6 @@ public class Project {
     private String description;
 
     @ManyToOne
-    @JsonIgnore
     private Customer customer;
 
     @ManyToOne

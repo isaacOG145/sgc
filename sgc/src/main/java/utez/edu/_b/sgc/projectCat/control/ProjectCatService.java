@@ -36,13 +36,13 @@ public class  ProjectCatService {
             throw new IllegalArgumentException("El nombre excede 100 caracteres");
         }
         if (!dto.getName().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$")) {
-            throw new IllegalArgumentException("No se permiten caracteres especiales");
+            throw new IllegalArgumentException("El nombre no puede contener carácteres especiales");
         }
         if (dto.getDescription().length() > 100) {
-            throw new IllegalArgumentException("La descripcion excede 100 caracteres");
+            throw new IllegalArgumentException("La descripcion excede 100 carácteres");
         }
         if(!dto.getDescription().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$")){
-            throw new IllegalArgumentException("No se permiten caracteres especiales");
+            throw new IllegalArgumentException("La descripcion no puede contener carácteres especiales");
         }
 
     }

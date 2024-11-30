@@ -9,8 +9,8 @@ import utez.edu._b.sgc.users.model.UserDto;
 import utez.edu._b.sgc.utils.Message;
 
 @RestController
-@CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 @RequestMapping("/user")
+@CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 public class UserController {
 
     private final UserService userService;
@@ -18,6 +18,11 @@ public class UserController {
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
+    }
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<Message> getUserById(@PathVariable Long userId) {
+        return userService.getUserById(userId);
     }
 
     @GetMapping("/all")
@@ -43,6 +48,16 @@ public class UserController {
     @PutMapping("/change-status")
     public ResponseEntity<Message> changeStatus(@Validated(UserDto.ChangeStatus.class) @RequestBody UserDto dto) {
         return userService.changeStatus(dto);
+    }
+
+    @PostMapping("/send-email")
+    public ResponseEntity<Message> save(@Validated({UserDto.FindByEmail.class}) @RequestBody UserDto dto){
+        return userService.sendEmail(dto);
+    }
+
+    @PostMapping("/verify-code")
+    public ResponseEntity<Message> verifyCode(@Validated({UserDto.VerifyCode.class}) @RequestBody UserDto dto){
+        return userService.verifyCode(dto);
     }
 
 

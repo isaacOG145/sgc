@@ -19,7 +19,6 @@ public class DataInitializer {
     CommandLineRunner initDatabase(UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder passwordEncoder) {
         return args -> {
 
-            // Crear o asegurar que el rol 'ROLE_ADMIN' existe
             Optional<Role> optionalRole = roleRepository.findByName("ROLE_ADMIN");
             if (!optionalRole.isPresent()) {
                 Role adminRole = new Role("ROLE_ADMIN");
@@ -36,9 +35,9 @@ public class DataInitializer {
             }
 
             // Crear o asegurar que el rol de 'consultas' o sin rol específico existe (si es necesario)
-            optionalRole = roleRepository.findByName("ROLE_QUERY_ACCESS");
+            optionalRole = roleRepository.findByName("ROLE_USER");
             if (!optionalRole.isPresent()) {
-                Role queryRole = new Role("ROLE_QUERY_ACCESS");
+                Role queryRole = new Role("ROLE_USER");
                 roleRepository.saveAndFlush(queryRole);
 
                 Optional<User> optionalUser = userRepository.findByEmail("queryuser@domain.com");

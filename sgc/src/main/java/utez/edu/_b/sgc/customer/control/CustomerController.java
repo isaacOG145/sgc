@@ -10,6 +10,7 @@ import utez.edu._b.sgc.utils.Message;
 @RestController
 @CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 @RequestMapping("/customers")
+@CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 public class CustomerController {
 
     private final CustomerService customerService;

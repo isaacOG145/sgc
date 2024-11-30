@@ -37,7 +37,4 @@ public class Role {
         this.name = name;
     }
 
-    // Crear los roles como constantes
-    public static final String ADMIN = "ADMIN";
-    public static final String USER = "USER";
 }

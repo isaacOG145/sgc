@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import utez.edu._b.sgc.users.model.User;
 import utez.edu._b.sgc.users.model.UserRepository;
 
+import java.util.stream.Collectors;
+
 import java.util.List;
 
 @Service
@@ -22,20 +24,13 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        // Buscar usuario por email
-        User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado: " + email));
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepository.findByEmail(username)
+                .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado: " + username));
 
-        // Asignar el rol, usando el prefijo "ROLE_"
-        String roleName = "ROLE_" + user.getRole().getName().toUpperCase();  // Usar el nombre del rol directamente
-
-        return new org.springframework.security.core.userdetails.User(
-                user.getEmail(),
-                user.getPassword(),
-                user.isStatus(),  // Asegurarse de que el estado del usuario sea considerado en la autenticación
-                true, true, true,
-                List.of(new SimpleGrantedAuthority(roleName))  // Solo un rol por usuario
-        );
+        return new CustomUserDetails(user);
     }
+
+
+
 }

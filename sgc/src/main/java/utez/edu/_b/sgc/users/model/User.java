@@ -31,15 +31,29 @@ public class User {
     @Column(name = "status", columnDefinition = "BOOL DEFAULT TRUE")
     private boolean status;
 
+    @Column(name = "code", columnDefinition = "VARCHAR(10)")
+    private String code;
+
     @Column(name = "create_at", insertable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
 
     @ManyToOne
     @JoinColumn(name = "role_id")
-    private Role role;  // Ahora cada usuario tiene un solo rol
+    private Role role;
 
     public User() {}
+
+    public User(Long id, String email, String code) {
+        this.id = id;
+        this.email = email;
+        this.code = code;
+    }
+
+    public User(String email, String code) {
+        this.email = email;
+        this.code = code;
+    }
 
     public User(String name, String lastName, String email, String phoneNumber, String password) {
         this.name = name;
@@ -88,6 +102,8 @@ public class User {
         return status;
     }
 
+    public String getCode() { return code; }
+
     public Role getRole() {
         return role;
     }
@@ -119,6 +135,8 @@ public class User {
     public void setStatus(boolean status) {
         this.status = status;
     }
+
+    public void setCode(String code) { this.code = code; }
 
     public void setRole(Role role) {
         this.role = role;

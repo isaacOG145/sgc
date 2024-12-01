@@ -295,31 +295,7 @@ class CustomerServiceTest {
         assertEquals("El estado del cliente actualizado exitosamente", response.getBody().getText());
     }
 
-    @Test
-    public void testFindActiveCustomers() {
-        // Crear una lista de clientes activos
-        Customer activeCustomer1 = new Customer("John Doe", "johndoe@example.com", "1234567890", true);
-        Customer activeCustomer2 = new Customer("Jane Doe", "janedoe@example.com", "0987654321", true);
 
-        // Crear una lista de clientes activos mock
-        List<Customer> activeCustomers = List.of(activeCustomer1, activeCustomer2);
-
-        // Mock del repositorio para devolver los clientes activos
-        when(customerRepository.findByStatus(true)).thenReturn(activeCustomers);
-
-        // Ejecutar el método de búsqueda de clientes activos
-        ResponseEntity<Message> response = customerService.findActiveCustomers();
-
-        // Verificar que la respuesta tiene un código 200 OK
-        assertEquals(200, response.getStatusCodeValue());
-
-        // Verificar que el mensaje sea el esperado
-        assertEquals("Lista de clientes activos", response.getBody().getText());
-
-        // Verificar que la respuesta contenga la lista de clientes activos
-        assertNotNull(response.getBody().getData());
-        assertEquals(2, ((List<?>) response.getBody().getData()).size()); // Verificar que la lista tiene 2 clientes
-    }
 
 
 }

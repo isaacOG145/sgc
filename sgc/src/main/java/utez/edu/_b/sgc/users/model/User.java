@@ -34,6 +34,9 @@ public class User {
     @Column(name = "code", columnDefinition = "VARCHAR(10)")
     private String code;
 
+    @Column(name = "verified", columnDefinition = "BOOL DEFAULT TRUE")
+    private boolean isVerified = false;
+
     @Column(name = "create_at", insertable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
@@ -63,7 +66,7 @@ public class User {
         this.password = password;
     }
 
-    public User(String name, String lastName, String email, String phoneNumber, String password, Role role, boolean status) {
+    public User(String name, String lastName, String email, String phoneNumber, String password, Role role, boolean status, boolean verified) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
@@ -71,6 +74,7 @@ public class User {
         this.password = password;
         this.role = role;
         this.status = status;
+        this.isVerified = verified;
     }
 
     // Getters y Setters
@@ -103,6 +107,10 @@ public class User {
     }
 
     public String getCode() { return code; }
+
+    public boolean isVerified() {
+        return isVerified;
+    }
 
     public Role getRole() {
         return role;
@@ -140,6 +148,10 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public void setVerified(boolean verified) {
+        this.isVerified = verified;
     }
 }
 

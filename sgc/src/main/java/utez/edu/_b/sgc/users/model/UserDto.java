@@ -14,13 +14,13 @@ public class UserDto {
     @NotBlank(groups = {Modify.class, Register.class}, message = "El campo apellido no puede estar vacío")
     private String lastName;
 
-    @NotBlank(groups = {Modify.class, Register.class, FindByEmail.class,VerifyCode.class}, message = "El correo electrónico es obligatorio")
+    @NotBlank(groups = {ChangePassword.class,Modify.class, Register.class, FindByEmail.class,VerifyCode.class}, message = "El correo electrónico es obligatorio")
     private String email;
 
     @NotBlank(groups = {Modify.class, Register.class}, message = "El teléfono es obligatorio")
     private String phoneNumber;
 
-    @NotBlank(groups = {Register.class}, message = "La contraseña es obligatoria")
+    @NotBlank(groups = {ChangePassword.class,Register.class}, message = "La contraseña es obligatoria")
     private String password;
 
     @NotNull(groups = {Modify.class, Register.class}, message = "El rol no puede ser nulo")
@@ -28,6 +28,8 @@ public class UserDto {
 
     @NotBlank(groups = {VerifyCode.class})
     private String code;
+
+    private boolean isVerified;
 
     private boolean status;
 
@@ -106,6 +108,10 @@ public class UserDto {
         this.code = code;
     }
 
+    public boolean isVerified() { return this.isVerified; }
+
+    public void setVerified(boolean isVerified) { this.isVerified = isVerified; }
+
     public interface Register {
     }
 
@@ -115,6 +121,14 @@ public class UserDto {
     public interface ChangeStatus {
     }
 
-    public interface FindByEmail {}
-    public interface VerifyCode {}
+    public interface FindByEmail {
+
+    }
+    public interface VerifyCode {
+
+    }
+
+    public interface ChangePassword {
+
+    }
 }

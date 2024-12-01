@@ -29,7 +29,8 @@ public class DataInitializer {
                     // Crear usuario admin
                     User adminUser = new User("Admin", "User", "admin@domain.com", "1234567890", passwordEncoder.encode("adminPassword"));
                     adminUser.setStatus(true);
-                    adminUser.setRole(adminRole);  // Asignar el rol admin
+                    adminUser.setRole(adminRole);
+                    adminUser.setVerified(false);// Asignar el rol admin
                     userRepository.saveAndFlush(adminUser);
                 }
             }
@@ -44,7 +45,8 @@ public class DataInitializer {
                 if (!optionalUser.isPresent()) {
                     // Crear usuario con acceso solo para consultas (sin rol o con un rol específico)
                     User queryUser = new User("Query", "User", "queryuser@domain.com", "0987654321", passwordEncoder.encode("queryPassword"));
-                    queryUser.setRole(queryRole);  // Asignar el rol de solo consultas
+                    queryUser.setRole(queryRole);
+                    queryUser.setVerified(false);// Asignar el rol de solo consultas
                     userRepository.saveAndFlush(queryUser);
                 }
             }

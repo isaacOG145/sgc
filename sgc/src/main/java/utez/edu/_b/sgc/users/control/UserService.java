@@ -6,12 +6,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import utez.edu._b.sgc.customer.model.Customer;
 import utez.edu._b.sgc.role.model.Role;
 import utez.edu._b.sgc.role.model.RoleRepository;
+import utez.edu._b.sgc.security.JwtUtil;
+import utez.edu._b.sgc.security.UserDetailsServiceImpl;
+import utez.edu._b.sgc.security.dto.AuthResponse;
 import utez.edu._b.sgc.users.model.User;
 import utez.edu._b.sgc.users.model.UserDto;
 import utez.edu._b.sgc.users.model.UserRepository;
@@ -33,15 +37,19 @@ public class UserService {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
     private final EmailSender emailSender;
+    private final JwtUtil jwtUtil;
+    private final UserDetailsServiceImpl userDetailsService;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     @Autowired
-    public UserService(UserRepository userRepository, RoleRepository roleRepository, EmailSender emailSender) {
+    public UserService(UserRepository userRepository, RoleRepository roleRepository, EmailSender emailSender, JwtUtil jwtUtil, UserDetailsServiceImpl userDetailsService) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.emailSender = emailSender;
+        this.jwtUtil = jwtUtil;
+        this.userDetailsService = userDetailsService;
     }
 
     private void validateUserData(UserDto dto) {
@@ -66,6 +74,10 @@ public class UserService {
         if (!dto.getPhoneNumber().matches("^[0-9]{10}$")) {
             throw new IllegalArgumentException("El teléfono debe contener solo dígitos numéricos");
         }
+        if(dto.getPassword().length() > 255){
+            throw new IllegalArgumentException("La contraseña excede 255 caracteres");
+        }
+
     }
 
     @Transactional(readOnly = true)
@@ -134,7 +146,8 @@ public class UserService {
                     dto.getPhoneNumber(),
                     encodedPassword,
                     role,
-                    true
+                    true,
+                    false
             );
 
             newUser = userRepository.saveAndFlush(newUser);
@@ -210,7 +223,7 @@ public class UserService {
     public ResponseEntity<Message> sendEmail(UserDto dto) {
         Optional<User> optional = userRepository.findFirstByEmail(dto.getEmail());
         if(!optional.isPresent()){
-            return new ResponseEntity<>(new Message("Usuario no encontrado", TypesResponse.WARNING), HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(new Message("Correo no encontrado", TypesResponse.WARNING), HttpStatus.NOT_FOUND);
         }
 
         Random random = new Random();
@@ -394,13 +407,63 @@ public class UserService {
         return new ResponseEntity<>(new Message("Correo enviado", TypesResponse.SUCCESS), HttpStatus.OK);
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public ResponseEntity<Message> verifyCode(UserDto dto) {
-        Optional<User> optional = userRepository.findFirstByEmailAndCode(dto.getEmail(),dto.getCode());
-        if(!optional.isPresent()){
-            return new ResponseEntity<>(new Message("No se pudo verificar", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
-        }
+        try {
+            User user = userRepository.findFirstByEmailAndCode(dto.getEmail(), dto.getCode())
+                    .orElseThrow(() -> new RuntimeException("No se pudo verificar el código. El correo o el código pueden ser incorrectos."));
 
-        return new ResponseEntity<>(new Message("Verificado", TypesResponse.SUCCESS), HttpStatus.OK);
+            if (user.isVerified()) {
+                return new ResponseEntity<>(new Message("Este código ya ha sido utilizado o el usuario ya está verificado.", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+            }
+
+            user.setVerified(true);
+            user = userRepository.saveAndFlush(user);
+
+            return new ResponseEntity<>(new Message(user, "Código verificado correctamente.", TypesResponse.SUCCESS), HttpStatus.OK);
+        } catch (IllegalArgumentException e) {
+
+            return new ResponseEntity<>(new Message(e.getMessage(), TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        } catch (Exception e) {
+            // Capturar cualquier otro error
+            logger.error("Error al verificar el código", e);
+            return new ResponseEntity<>(new Message("Revise los datos e inténtelo de nuevo.", TypesResponse.ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
+
+
+    @Transactional
+    public ResponseEntity<Message> ChangePassword(UserDto dto) {
+        try {
+            User user = userRepository.findByEmail(dto.getEmail())
+                    .orElseThrow(() -> new RuntimeException("El usuario no existe"));
+
+            if (passwordEncoder.matches(dto.getPassword(), user.getPassword())) {
+                return new ResponseEntity<>(new Message("La nueva contraseña no puede ser la misma que la anterior", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+            }
+
+            String encodedPassword = dto.getPassword() != null && !dto.getPassword().isEmpty()
+                    ? passwordEncoder.encode(dto.getPassword())
+                    : user.getPassword();
+
+            user.setPassword(encodedPassword);
+            user.setVerified(false);
+            user.setCode(null);
+
+            user = userRepository.saveAndFlush(user);
+
+            return new ResponseEntity<>(new Message(user, "La contraseña y el código se han actualizado correctamente", TypesResponse.SUCCESS), HttpStatus.OK);
+
+        } catch (IllegalArgumentException e) {
+
+            return new ResponseEntity<>(new Message(e.getMessage(), TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
+        } catch (Exception e) {
+
+            logger.error("Error al actualizar la contraseña y el código", e);
+            return new ResponseEntity<>(new Message("Revise los datos e inténtelo de nuevo", TypesResponse.ERROR), HttpStatus.BAD_REQUEST);
+        }
+    }
+
+
+
 }

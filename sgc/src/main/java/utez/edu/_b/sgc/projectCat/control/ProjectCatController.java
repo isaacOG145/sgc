@@ -12,7 +12,6 @@ import utez.edu._b.sgc.utils.Message;
 @RestController
 @CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 @RequestMapping("/projectCat")
-@CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 public class ProjectCatController {
 
     private final ProjectCatService pcategoriesService;

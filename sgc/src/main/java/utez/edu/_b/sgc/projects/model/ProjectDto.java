@@ -3,80 +3,88 @@ package utez.edu._b.sgc.projects.model;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import utez.edu._b.sgc.customer.model.Customer;
-import utez.edu._b.sgc.customer.model.CustomerDto;
 import utez.edu._b.sgc.projectCat.model.ProjectCategory;
 
 public class ProjectDto {
 
-    @NotNull(groups = {Modify.class, ChangeStatus.class},message = "El id no puede ser nulo")
+    @NotNull(groups = {Modify.class, ChangeStatus.class}, message = "El id no puede ser nulo")
     private Long id;
 
-    @NotBlank(groups = {Modify.class,Register.class}, message = "El campo nombre no puede estar vacio")
+    @NotBlank(groups = {Modify.class, Register.class}, message = "El campo nombre no puede estar vacío")
     private String name;
 
-    @NotBlank(groups = {Modify.class,Register.class}, message = "El campo abreviación no puede estar vacio")
+    @NotBlank(groups = {Modify.class, Register.class}, message = "El campo abreviación no puede estar vacío")
     private String abbreviation;
 
-    @NotBlank(groups = {Modify.class,Register.class}, message = "El campo descripcion no puede estar vacio")
+    @NotBlank(groups = {Modify.class, Register.class}, message = "El campo descripción no puede estar vacío")
     private String description;
 
     @NotNull(groups = {Register.class, Modify.class}, message = "El cliente no puede ser nulo")
-    private Customer customer;
+    private Long customerId;
 
-    @NotNull(groups = {Register.class, Modify.class}, message = "La categoria del proyecto no puede ser nulo")
-    private ProjectCategory projectCategory;
+    @NotNull(groups = {Register.class, Modify.class}, message = "La categoría del proyecto no puede ser nula")
+    private Long projectCategoryId;
 
-    public ProjectDto() {}
+    private boolean status;
+
+    // Getters y setters
+    public Long getId() {
+        return id;
+    }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
+    public String getAbbreviation() {
+        return abbreviation;
+    }
+
     public void setAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public Long getCustomerId() {
+        return customerId;
     }
 
-    public void setProjectCategory(ProjectCategory projectCategory) {
-        this.projectCategory = projectCategory;
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
     }
 
-    public Long getId() {
-        return this.id;
+    public Long getProjectCategoryId() {
+        return projectCategoryId;
     }
 
-    public String getName() {
-        return this.name;
+    public void setProjectCategoryId(Long projectCategoryId) {
+        this.projectCategoryId = projectCategoryId;
     }
 
-    public String getAbbreviation() {
-        return this.abbreviation;
+    public boolean isStatus() {
+        return status;
     }
 
-    public String getDescription() {
-        return this.description;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
-    public Customer getCustomer() {
-        return this.customer;
-    }
-
-    public ProjectCategory getProjectCategory() {
-        return this.projectCategory;
-    }
-
-    public interface Register{}
-    public interface Modify{}
-    public interface ChangeStatus{}
+    public interface Register {}
+    public interface Modify {}
+    public interface ChangeStatus {}
 }

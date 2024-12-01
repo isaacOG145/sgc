@@ -14,4 +14,9 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
     List<Project> findByStatus(boolean status);
 
     List<Project> findAll();
+
+    // Métodos para verificar duplicados
+    boolean existsByName(String name);
+
+    boolean existsByAbbreviation(String abbreviation);
 }

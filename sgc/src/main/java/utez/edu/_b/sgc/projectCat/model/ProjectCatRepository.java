@@ -10,4 +10,6 @@ public interface ProjectCatRepository extends JpaRepository<ProjectCategory, Lon
 
     //Buscar todos los activos
     List<ProjectCategory> findByStatus(boolean status);
+
+    boolean existsByName (String projectName);
 }

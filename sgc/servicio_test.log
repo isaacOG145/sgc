@@ -428,3 +428,7 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2024-12-01T18:23:16.658-06:00  WARN 11464 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2024-12-01T18:23:17.535-06:00  INFO 11464 --- [sgc] [main] utez.edu._b.sgc.CustomerServiceTest      : Started CustomerServiceTest in 6.585 seconds (process running for 7.985)
 2024-12-01T18:23:17.610-06:00  INFO 11464 --- [sgc] [main] u.e._.s.c.control.CustomerService        : Búsqueda de clientes activos realizada correctamente
+2024-12-01T18:41:25.640-06:00  WARN 11464 --- [sgc] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m10s888ms973µs).
+2024-12-01T18:41:25.716-06:00  INFO 11464 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-01T18:41:25.718-06:00  INFO 11464 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-01T18:41:25.729-06:00  INFO 11464 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

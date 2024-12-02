@@ -409,3 +409,22 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2024-12-01T18:23:00.558-06:00  INFO 5792 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-12-01T18:23:00.561-06:00  INFO 5792 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-12-01T18:23:00.570-06:00  INFO 5792 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-01T18:23:11.328-06:00  INFO 11464 --- [sgc] [main] utez.edu._b.sgc.CustomerServiceTest      : Starting CustomerServiceTest using Java 21.0.5 with PID 11464 (started by Axel in D:\sgc\sgc\sgc)
+2024-12-01T18:23:11.330-06:00  INFO 11464 --- [sgc] [main] utez.edu._b.sgc.CustomerServiceTest      : No active profile set, falling back to 1 default profile: "default"
+2024-12-01T18:23:12.333-06:00  INFO 11464 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-01T18:23:12.427-06:00  INFO 11464 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 5 JPA repository interfaces.
+2024-12-01T18:23:13.771-06:00  INFO 11464 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-01T18:23:13.857-06:00  INFO 11464 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-01T18:23:13.916-06:00  INFO 11464 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-01T18:23:14.145-06:00  INFO 11464 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-01T18:23:14.183-06:00  INFO 11464 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-01T18:23:14.640-06:00  INFO 11464 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@395197cb
+2024-12-01T18:23:14.643-06:00  INFO 11464 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-01T18:23:14.700-06:00  WARN 11464 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-01T18:23:14.701-06:00  WARN 11464 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-01T18:23:15.795-06:00  INFO 11464 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-01T18:23:16.043-06:00  INFO 11464 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-01T18:23:16.609-06:00  INFO 11464 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2024-12-01T18:23:16.658-06:00  WARN 11464 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-01T18:23:17.535-06:00  INFO 11464 --- [sgc] [main] utez.edu._b.sgc.CustomerServiceTest      : Started CustomerServiceTest in 6.585 seconds (process running for 7.985)
+2024-12-01T18:23:17.610-06:00  INFO 11464 --- [sgc] [main] u.e._.s.c.control.CustomerService        : Búsqueda de clientes activos realizada correctamente

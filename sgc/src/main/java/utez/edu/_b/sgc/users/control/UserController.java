@@ -1,23 +1,38 @@
 package utez.edu._b.sgc.users.control;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import utez.edu._b.sgc.projectCat.model.ProjectCatDTO;
+import utez.edu._b.sgc.security.JwtUtil;
+import utez.edu._b.sgc.security.dto.AuthResponse;
 import utez.edu._b.sgc.users.model.UserDto;
 import utez.edu._b.sgc.utils.Message;
+import utez.edu._b.sgc.utils.TypesResponse;
 
 @RestController
 @RequestMapping("/user")
-//@CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
+@CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 public class UserController {
 
     private final UserService userService;
 
+
+    private final JwtUtil jwtUtil;
+
+
     @Autowired
-    public UserController(UserService userService) {
+    public UserController(UserService userService, JwtUtil jwtUtil) {
         this.userService = userService;
+        this.jwtUtil = jwtUtil;
+    }
+
+    @GetMapping("/findId/{userId}")
+    public ResponseEntity<Message> getUserById(@PathVariable Long userId) {
+        return userService.getUserById(userId);
     }
 
     @GetMapping("/all")
@@ -45,5 +60,15 @@ public class UserController {
         return userService.changeStatus(dto);
     }
 
+    @PostMapping("/send-email")
+    public ResponseEntity<Message> sendEmail(@Validated({UserDto.FindByEmail.class}) @RequestBody UserDto dto){
+        return userService.sendEmail(dto);
+    }
+
+
+    @PutMapping("/change-pass")
+    public ResponseEntity<Message> ChangePass(@Validated({UserDto.ChangePassword.class}) @RequestBody UserDto dto){
+        return userService.ChangePassword(dto);
+    }
 
 }

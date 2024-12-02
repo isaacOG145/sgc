@@ -8,6 +8,7 @@ import utez.edu._b.sgc.projects.model.ProjectDto;
 import utez.edu._b.sgc.utils.Message;
 
 @RestController
+@CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 @RequestMapping("/projects")
 public class ProjectController {
 
@@ -34,7 +35,7 @@ public class ProjectController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Message> updateCustomers(@Validated(ProjectDto.Modify.class) @RequestBody ProjectDto dto) {
+    public ResponseEntity<Message> updateProjects(@Validated(ProjectDto.Modify.class) @RequestBody ProjectDto dto) {
         return projectService.update(dto);
     }
 

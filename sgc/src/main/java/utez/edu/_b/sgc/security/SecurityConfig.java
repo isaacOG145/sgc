@@ -27,16 +27,39 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/login", "/register").permitAll()
-                        //aqui meteremos validaciones despues
-                        .requestMatchers("/customers/**").permitAll()
-                        .anyRequest().authenticated()
+                        .requestMatchers("/login").permitAll()
+                        .requestMatchers("/verify-code").permitAll()
+                        .requestMatchers("/user/send-email").permitAll()
+
+                        .requestMatchers("/user/change-pass").permitAll()
+
+                        .requestMatchers("/user/findId/**").permitAll()// hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
+
+
+                        .requestMatchers("/customers/**").permitAll()//.hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/projectCat/**").permitAll()//.hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/projects/**").permitAll()//.hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/user/**").permitAll()//.hasAuthority("ROLE_ADMIN")
+
+                        // Rutas accesibles por ROLE_USER para consultas
+                        .requestMatchers("/customers/all").permitAll()//.hasAuthority("ROLE_USER")
+                        .requestMatchers("/customers/active").permitAll()//.hasAuthority("ROLE_USER")
+                        .requestMatchers("/projectCat/all").permitAll()//.hasAuthority("ROLE_USER")
+                        .requestMatchers("/projectCat/active").permitAll()//.hasAuthority("ROLE_USER")
+                        .requestMatchers("/projects/active").permitAll()//.hasAuthority("ROLE_USER")
+                        .requestMatchers("/projects/all").permitAll()//.hasAuthority("ROLE_USER")
+                        .requestMatchers("/user/active").permitAll()//.hasAuthority("ROLE_USER")
+                        .requestMatchers("/user/all").permitAll()//.hasAuthority("ROLE_USER")
+
+                        .anyRequest().permitAll()
+
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
+
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {

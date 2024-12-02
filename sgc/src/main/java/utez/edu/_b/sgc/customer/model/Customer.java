@@ -33,6 +33,10 @@ public class Customer {
 
     public Customer() {}
 
+    public Customer(Long idCustomer) {
+        this.id = idCustomer;
+    }
+
     public Customer(String name, String email, String phoneNumber, boolean status) {
         this.name = name;
         this.email = email;

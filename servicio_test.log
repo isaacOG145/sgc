@@ -1,201 +1,252 @@
-2024-11-30T08:26:07.845-06:00  INFO 21328 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23.0.1 with PID 21328 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc)
-2024-11-30T08:26:07.850-06:00  INFO 21328 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-11-30T08:26:08.484-06:00  INFO 21328 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-30T08:26:08.534-06:00  INFO 21328 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 5 JPA repository interfaces.
-2024-11-30T08:26:08.881-06:00  INFO 21328 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-11-30T08:26:08.891-06:00  INFO 21328 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-30T08:26:08.891-06:00  INFO 21328 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-11-30T08:26:08.924-06:00  INFO 21328 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-30T08:26:08.924-06:00  INFO 21328 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1040 ms
-2024-11-30T08:26:09.003-06:00  INFO 21328 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-30T08:26:09.043-06:00  INFO 21328 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-11-30T08:26:09.069-06:00  INFO 21328 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-30T08:26:09.274-06:00  INFO 21328 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-30T08:26:09.295-06:00  INFO 21328 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-30T08:26:09.565-06:00  INFO 21328 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b7ab7ab
-2024-11-30T08:26:09.566-06:00  INFO 21328 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-30T08:26:09.611-06:00  WARN 21328 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-11-30T08:26:09.612-06:00  WARN 21328 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-11-30T08:26:10.225-06:00  INFO 21328 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-30T08:26:10.405-06:00  INFO 21328 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-30T08:26:10.675-06:00  INFO 21328 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
-2024-11-30T08:26:10.709-06:00  WARN 21328 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-30T08:26:10.857-06:00 DEBUG 21328 --- [sgc] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtRequestFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-11-30T08:26:11.008-06:00  INFO 21328 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-11-30T08:26:11.013-06:00  INFO 21328 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Started SgcApplication in 3.443 seconds (process running for 4.068)
-2024-11-30T08:33:11.670-06:00  INFO 21328 --- [sgc] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-30T08:33:11.670-06:00  INFO 21328 --- [sgc] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-30T08:33:11.670-06:00  INFO 21328 --- [sgc] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-11-30T08:33:11.682-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /user/save
-2024-11-30T08:33:11.686-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T08:33:11.686-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured OPTIONS /user/save
-2024-11-30T08:33:11.702-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /user/save
-2024-11-30T08:33:11.702-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T08:33:11.702-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /user/save
-2024-11-30T08:33:16.721-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
-2024-11-30T08:33:16.721-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T08:33:16.721-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
-2024-11-30T08:33:16.733-06:00  INFO 21328 --- [sgc] [http-nio-8080-exec-5] u.e._.s.projects.control.ProjectService  : No se encontraron proyectos
-2024-11-30T08:34:26.147-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /user/send-email
-2024-11-30T08:34:26.147-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T08:34:26.151-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /user/send-email
-2024-11-30T08:34:26.151-06:00  WARN 21328 --- [sgc] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "send-email"]
-2024-11-30T08:34:26.155-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
-2024-11-30T08:34:26.155-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /error
-2024-11-30T08:34:26.161-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T08:34:36.697-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /user/send-email
-2024-11-30T08:34:36.697-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T08:34:36.697-06:00 DEBUG 21328 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /user/send-email
-2024-11-30T08:34:42.430-06:00 ERROR 21328 --- [sgc] [http-nio-8080-exec-8] utez.edu._b.sgc.utils.EmailSender        : No se pudo enviar el correo
-2024-11-30T08:41:03.751-06:00  INFO 21328 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-30T08:41:03.752-06:00  INFO 21328 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-30T08:41:03.755-06:00  INFO 21328 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-11-30T08:41:05.315-06:00  INFO 14304 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23.0.1 with PID 14304 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc)
-2024-11-30T08:41:05.317-06:00  INFO 14304 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-11-30T08:41:05.687-06:00  INFO 14304 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-30T08:41:05.728-06:00  INFO 14304 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 5 JPA repository interfaces.
-2024-11-30T08:41:06.034-06:00  INFO 14304 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-11-30T08:41:06.042-06:00  INFO 14304 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-30T08:41:06.042-06:00  INFO 14304 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-11-30T08:41:06.071-06:00  INFO 14304 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-30T08:41:06.071-06:00  INFO 14304 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 725 ms
-2024-11-30T08:41:06.135-06:00  INFO 14304 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-30T08:41:06.165-06:00  INFO 14304 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-11-30T08:41:06.190-06:00  INFO 14304 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-30T08:41:06.369-06:00  INFO 14304 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-30T08:41:06.386-06:00  INFO 14304 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-30T08:41:06.605-06:00  INFO 14304 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74cd798f
-2024-11-30T08:41:06.606-06:00  INFO 14304 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-30T08:41:06.631-06:00  WARN 14304 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-11-30T08:41:06.632-06:00  WARN 14304 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-11-30T08:41:07.202-06:00  INFO 14304 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-30T08:41:07.341-06:00  INFO 14304 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-30T08:41:07.597-06:00  INFO 14304 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
-2024-11-30T08:41:07.628-06:00  WARN 14304 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-30T08:41:07.763-06:00 DEBUG 14304 --- [sgc] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtRequestFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-11-30T08:41:07.902-06:00  INFO 14304 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-11-30T08:41:07.907-06:00  INFO 14304 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Started SgcApplication in 2.843 seconds (process running for 3.222)
-2024-11-30T08:41:15.224-06:00  INFO 14304 --- [sgc] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-30T08:41:15.224-06:00  INFO 14304 --- [sgc] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-30T08:41:15.225-06:00  INFO 14304 --- [sgc] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-11-30T08:41:15.235-06:00 DEBUG 14304 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /user/send-email
-2024-11-30T08:41:15.238-06:00 DEBUG 14304 --- [sgc] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T08:41:15.239-06:00 DEBUG 14304 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /user/send-email
-2024-11-30T08:41:21.186-06:00 ERROR 14304 --- [sgc] [http-nio-8080-exec-2] utez.edu._b.sgc.utils.EmailSender        : No se pudo enviar el correo
-2024-11-30T08:47:01.402-06:00  INFO 14304 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-30T08:47:01.404-06:00  INFO 14304 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-30T08:47:01.407-06:00  INFO 14304 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-11-30T08:51:15.286-06:00  INFO 8776 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23.0.1 with PID 8776 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc)
-2024-11-30T08:51:15.290-06:00  INFO 8776 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-11-30T08:51:15.675-06:00  INFO 8776 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-30T08:51:15.715-06:00  INFO 8776 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 5 JPA repository interfaces.
-2024-11-30T08:51:16.015-06:00  INFO 8776 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-11-30T08:51:16.023-06:00  INFO 8776 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-30T08:51:16.023-06:00  INFO 8776 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-11-30T08:51:16.051-06:00  INFO 8776 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-30T08:51:16.051-06:00  INFO 8776 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 721 ms
-2024-11-30T08:51:16.123-06:00  INFO 8776 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-30T08:51:16.155-06:00  INFO 8776 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-11-30T08:51:16.175-06:00  INFO 8776 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-30T08:51:16.355-06:00  INFO 8776 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-30T08:51:16.371-06:00  INFO 8776 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-30T08:51:16.591-06:00  INFO 8776 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49986178
-2024-11-30T08:51:16.591-06:00  INFO 8776 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-30T08:51:16.619-06:00  WARN 8776 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-11-30T08:51:16.619-06:00  WARN 8776 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-11-30T08:51:17.217-06:00  INFO 8776 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-30T08:51:17.328-06:00  INFO 8776 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-30T08:51:17.577-06:00  INFO 8776 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
-2024-11-30T08:51:17.607-06:00  WARN 8776 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-30T08:51:17.745-06:00 DEBUG 8776 --- [sgc] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtRequestFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-11-30T08:51:17.877-06:00  INFO 8776 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-11-30T08:51:17.882-06:00  INFO 8776 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Started SgcApplication in 2.845 seconds (process running for 3.23)
-2024-11-30T08:51:23.911-06:00  INFO 8776 --- [sgc] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-30T08:51:23.911-06:00  INFO 8776 --- [sgc] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-30T08:51:23.912-06:00  INFO 8776 --- [sgc] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-11-30T08:51:23.922-06:00 DEBUG 8776 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /user/send-email
-2024-11-30T08:51:23.925-06:00 DEBUG 8776 --- [sgc] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T08:51:23.926-06:00 DEBUG 8776 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /user/send-email
-2024-11-30T08:51:29.820-06:00 ERROR 8776 --- [sgc] [http-nio-8080-exec-2] utez.edu._b.sgc.utils.EmailSender        : No se pudo enviar el correo
-2024-11-30T08:58:34.810-06:00  INFO 8776 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-30T08:58:34.810-06:00  INFO 8776 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-30T08:58:34.814-06:00  INFO 8776 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-11-30T08:58:54.871-06:00  INFO 21924 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23.0.1 with PID 21924 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc)
-2024-11-30T08:58:54.873-06:00  INFO 21924 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-11-30T08:58:55.261-06:00  INFO 21924 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-30T08:58:55.302-06:00  INFO 21924 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 5 JPA repository interfaces.
-2024-11-30T08:58:55.594-06:00  INFO 21924 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-11-30T08:58:55.602-06:00  INFO 21924 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-30T08:58:55.602-06:00  INFO 21924 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-11-30T08:58:55.639-06:00  INFO 21924 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-30T08:58:55.639-06:00  INFO 21924 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 728 ms
-2024-11-30T08:58:55.704-06:00  INFO 21924 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-30T08:58:55.734-06:00  INFO 21924 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-11-30T08:58:55.752-06:00  INFO 21924 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-30T08:58:55.931-06:00  INFO 21924 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-30T08:58:55.948-06:00  INFO 21924 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-30T08:58:56.170-06:00  INFO 21924 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37d6dddc
-2024-11-30T08:58:56.172-06:00  INFO 21924 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-30T08:58:56.197-06:00  WARN 21924 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-11-30T08:58:56.197-06:00  WARN 21924 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-11-30T08:58:56.773-06:00  INFO 21924 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-30T08:58:56.887-06:00  INFO 21924 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-30T08:58:57.171-06:00  INFO 21924 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
-2024-11-30T08:58:57.204-06:00  WARN 21924 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-30T08:58:57.344-06:00 DEBUG 21924 --- [sgc] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtRequestFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-11-30T08:58:57.477-06:00  INFO 21924 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-11-30T08:58:57.481-06:00  INFO 21924 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Started SgcApplication in 2.87 seconds (process running for 3.309)
-2024-11-30T08:59:01.429-06:00  INFO 21924 --- [sgc] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-30T08:59:01.429-06:00  INFO 21924 --- [sgc] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-30T08:59:01.430-06:00  INFO 21924 --- [sgc] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-11-30T08:59:01.439-06:00 DEBUG 21924 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /user/send-email
-2024-11-30T08:59:01.443-06:00 DEBUG 21924 --- [sgc] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T08:59:01.444-06:00 DEBUG 21924 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /user/send-email
-2024-11-30T08:59:07.225-06:00 ERROR 21924 --- [sgc] [http-nio-8080-exec-2] utez.edu._b.sgc.utils.EmailSender        : No se pudo enviar el correo
-2024-11-30T09:21:53.398-06:00  INFO 21924 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-30T09:21:53.400-06:00  INFO 21924 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-30T09:21:53.403-06:00  INFO 21924 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-11-30T09:21:54.900-06:00  INFO 26056 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Starting SgcApplication using Java 23.0.1 with PID 26056 (S:\4to cuatri\Integradoras\desarrollo web\sgc\sgc\target\classes started by isaac in S:\4to cuatri\Integradoras\desarrollo web\sgc)
-2024-11-30T09:21:54.902-06:00  INFO 26056 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-11-30T09:21:55.301-06:00  INFO 26056 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-30T09:21:55.341-06:00  INFO 26056 --- [sgc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 5 JPA repository interfaces.
-2024-11-30T09:21:55.654-06:00  INFO 26056 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-11-30T09:21:55.662-06:00  INFO 26056 --- [sgc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-30T09:21:55.663-06:00  INFO 26056 --- [sgc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-11-30T09:21:55.695-06:00  INFO 26056 --- [sgc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-30T09:21:55.695-06:00  INFO 26056 --- [sgc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 758 ms
-2024-11-30T09:21:55.762-06:00  INFO 26056 --- [sgc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-30T09:21:55.793-06:00  INFO 26056 --- [sgc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-11-30T09:21:55.811-06:00  INFO 26056 --- [sgc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-30T09:21:55.981-06:00  INFO 26056 --- [sgc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-30T09:21:55.998-06:00  INFO 26056 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-30T09:21:56.213-06:00  INFO 26056 --- [sgc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76b5a559
-2024-11-30T09:21:56.214-06:00  INFO 26056 --- [sgc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-30T09:21:56.240-06:00  WARN 26056 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-11-30T09:21:56.241-06:00  WARN 26056 --- [sgc] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-11-30T09:21:56.845-06:00  INFO 26056 --- [sgc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-30T09:21:56.998-06:00  INFO 26056 --- [sgc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-30T09:21:57.286-06:00  INFO 26056 --- [sgc] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
-2024-11-30T09:21:57.324-06:00  WARN 26056 --- [sgc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-30T09:21:57.475-06:00 DEBUG 26056 --- [sgc] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtRequestFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-11-30T09:21:57.649-06:00  INFO 26056 --- [sgc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-11-30T09:21:57.655-06:00  INFO 26056 --- [sgc] [main] utez.edu._b.sgc.SgcApplication           : Started SgcApplication in 3.022 seconds (process running for 3.425)
-2024-11-30T09:23:14.228-06:00  INFO 26056 --- [sgc] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-30T09:23:14.228-06:00  INFO 26056 --- [sgc] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-30T09:23:14.232-06:00  INFO 26056 --- [sgc] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2024-11-30T09:23:14.245-06:00 DEBUG 26056 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /user/send-email
-2024-11-30T09:23:14.246-06:00 DEBUG 26056 --- [sgc] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T09:23:14.246-06:00 DEBUG 26056 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /user/send-email
-2024-11-30T09:23:29.430-06:00 DEBUG 26056 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /user/all
-2024-11-30T09:23:29.430-06:00 DEBUG 26056 --- [sgc] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T09:23:29.430-06:00 DEBUG 26056 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /user/all
-2024-11-30T09:23:29.442-06:00  INFO 26056 --- [sgc] [http-nio-8080-exec-3] u.edu._b.sgc.users.control.UserService   : La búsqueda ha sido realizada correctamente
-2024-11-30T09:37:09.021-06:00 DEBUG 26056 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /user/verify-code
-2024-11-30T09:37:09.021-06:00 DEBUG 26056 --- [sgc] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T09:37:09.021-06:00 DEBUG 26056 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /user/verify-code
-2024-11-30T09:37:30.653-06:00 DEBUG 26056 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /user/verify-code
-2024-11-30T09:37:30.653-06:00 DEBUG 26056 --- [sgc] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-11-30T09:37:30.653-06:00 DEBUG 26056 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /user/verify-code
-2024-11-30T09:38:53.350-06:00  INFO 26056 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-30T09:38:53.351-06:00  INFO 26056 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-30T09:38:53.354-06:00  INFO 26056 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-04T00:07:22.063-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:22.073-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:22.073-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:22.078-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-4] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:24.818-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /projectCat/active
+2024-12-04T00:07:24.818-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /customers/active
+2024-12-04T00:07:24.818-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:24.818-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:24.818-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /projectCat/active
+2024-12-04T00:07:24.818-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /customers/active
+2024-12-04T00:07:24.821-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-5] u.e._.s.p.control.ProjectCatService      : Búsqueda de las categorías de proyectos activos realizada correctamente
+2024-12-04T00:07:24.821-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-8] u.e._.s.c.control.CustomerService        : Búsqueda de clientes activos realizada correctamente
+2024-12-04T00:07:25.437-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /projects/update
+2024-12-04T00:07:25.437-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:25.437-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured OPTIONS /projects/update
+2024-12-04T00:07:25.438-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing PUT /projects/update
+2024-12-04T00:07:25.438-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:25.438-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured PUT /projects/update
+2024-12-04T00:07:25.443-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:25.443-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:25.443-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:25.445-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-9] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:27.093-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /projectCat/active
+2024-12-04T00:07:27.093-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /customers/active
+2024-12-04T00:07:27.093-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:27.093-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:27.093-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /projectCat/active
+2024-12-04T00:07:27.093-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /customers/active
+2024-12-04T00:07:27.095-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-10] u.e._.s.p.control.ProjectCatService      : Búsqueda de las categorías de proyectos activos realizada correctamente
+2024-12-04T00:07:27.095-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-3] u.e._.s.c.control.CustomerService        : Búsqueda de clientes activos realizada correctamente
+2024-12-04T00:07:30.335-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing PUT /projects/update
+2024-12-04T00:07:30.335-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:30.335-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured PUT /projects/update
+2024-12-04T00:07:30.344-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:30.344-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:30.345-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:30.347-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-7] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:32.254-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /customers/active
+2024-12-04T00:07:32.254-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /projectCat/active
+2024-12-04T00:07:32.254-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:32.254-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:32.254-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /customers/active
+2024-12-04T00:07:32.254-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /projectCat/active
+2024-12-04T00:07:32.256-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-4] u.e._.s.p.control.ProjectCatService      : Búsqueda de las categorías de proyectos activos realizada correctamente
+2024-12-04T00:07:32.256-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-5] u.e._.s.c.control.CustomerService        : Búsqueda de clientes activos realizada correctamente
+2024-12-04T00:07:34.682-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing PUT /projects/update
+2024-12-04T00:07:34.682-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:34.682-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured PUT /projects/update
+2024-12-04T00:07:34.688-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:34.688-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:34.688-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:34.692-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-6] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:38.763-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /projectCat/active
+2024-12-04T00:07:38.763-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /customers/active
+2024-12-04T00:07:38.764-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:38.764-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:38.764-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /projectCat/active
+2024-12-04T00:07:38.764-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /customers/active
+2024-12-04T00:07:38.766-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-9] u.e._.s.c.control.CustomerService        : Búsqueda de clientes activos realizada correctamente
+2024-12-04T00:07:38.766-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-1] u.e._.s.p.control.ProjectCatService      : Búsqueda de las categorías de proyectos activos realizada correctamente
+2024-12-04T00:07:39.659-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /customers/active
+2024-12-04T00:07:39.659-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /projectCat/active
+2024-12-04T00:07:39.660-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:39.660-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:39.660-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /projectCat/active
+2024-12-04T00:07:39.660-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /customers/active
+2024-12-04T00:07:39.662-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-3] u.e._.s.c.control.CustomerService        : Búsqueda de clientes activos realizada correctamente
+2024-12-04T00:07:39.662-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-10] u.e._.s.p.control.ProjectCatService      : Búsqueda de las categorías de proyectos activos realizada correctamente
+2024-12-04T00:07:40.474-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /projectCat/active
+2024-12-04T00:07:40.474-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /customers/active
+2024-12-04T00:07:40.474-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:40.474-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:40.474-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /projectCat/active
+2024-12-04T00:07:40.474-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /customers/active
+2024-12-04T00:07:40.477-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-2] u.e._.s.p.control.ProjectCatService      : Búsqueda de las categorías de proyectos activos realizada correctamente
+2024-12-04T00:07:40.477-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-7] u.e._.s.c.control.CustomerService        : Búsqueda de clientes activos realizada correctamente
+2024-12-04T00:07:43.594-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:43.594-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:43.594-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:43.594-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:43.595-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:43.595-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:43.597-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-4] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:43.597-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-5] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:44.650-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:44.650-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:44.650-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:44.650-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:44.650-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:44.650-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:44.652-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-8] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:44.652-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-6] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:45.667-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:45.667-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:45.667-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:45.667-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:45.667-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:45.667-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:45.670-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-1] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:45.670-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-9] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:46.667-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:46.667-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:46.668-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:46.668-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:46.668-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:46.668-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:46.671-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-3] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:46.671-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-10] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:47.406-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:47.406-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:47.407-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:47.407-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:47.407-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:47.407-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:47.409-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-7] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:47.409-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-2] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:48.137-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:48.137-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:48.137-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:48.137-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:48.137-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:48.137-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:48.140-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-5] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:48.140-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-4] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:49.685-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:49.685-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:49.686-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:49.689-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-6] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:52.029-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:52.030-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:52.030-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:52.034-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-8] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:53.095-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:53.095-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:53.095-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:53.100-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-1] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:54.125-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:54.126-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:54.126-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:54.128-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-9] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:07:57.166-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:07:57.166-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:07:57.166-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:07:57.170-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-3] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:08:02.484-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /projectCat/active
+2024-12-04T00:08:02.484-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /customers/active
+2024-12-04T00:08:02.484-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:02.484-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:02.484-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /projectCat/active
+2024-12-04T00:08:02.484-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /customers/active
+2024-12-04T00:08:02.486-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-7] u.e._.s.c.control.CustomerService        : Búsqueda de clientes activos realizada correctamente
+2024-12-04T00:08:02.486-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-10] u.e._.s.p.control.ProjectCatService      : Búsqueda de las categorías de proyectos activos realizada correctamente
+2024-12-04T00:08:12.500-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing PUT /projects/update
+2024-12-04T00:08:12.500-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:12.500-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured PUT /projects/update
+2024-12-04T00:08:12.508-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:08:12.508-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:12.508-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:08:12.511-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-5] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:08:14.406-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:08:14.407-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:14.407-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:08:14.410-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-4] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:08:16.544-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /user/findId/3
+2024-12-04T00:08:16.544-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:16.544-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured OPTIONS /user/findId/3
+2024-12-04T00:08:16.546-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /user/findId/3
+2024-12-04T00:08:16.567-06:00 ERROR 3240 --- [sgc] [http-nio-8080-exec-8] u.edu._b.sgc.security.JwtRequestFilter   : Error al extraer el correo de usuario del token: JWT expired at 2024-12-03T05:37:38Z. Current time: 2024-12-04T06:08:16Z, a difference of 88238566 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-12-04T00:08:16.567-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:16.567-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /user/findId/3
+2024-12-04T00:08:17.203-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /user/all
+2024-12-04T00:08:17.204-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:17.204-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /user/all
+2024-12-04T00:08:17.207-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-1] u.edu._b.sgc.users.control.UserService   : La búsqueda ha sido realizada correctamente
+2024-12-04T00:08:18.174-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /customers/all
+2024-12-04T00:08:18.175-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:18.175-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /customers/all
+2024-12-04T00:08:18.177-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-9] u.e._.s.c.control.CustomerService        : La búsqueda ha sido realizada correctamente
+2024-12-04T00:08:18.863-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /projectCat/all
+2024-12-04T00:08:18.863-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:18.863-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /projectCat/all
+2024-12-04T00:08:18.867-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-3] u.e._.s.p.control.ProjectCatService      : La búsqueda ha sido realizada correctamente
+2024-12-04T00:08:19.630-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:08:19.630-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:19.630-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:08:19.634-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-7] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:08:21.698-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /projectCat/all
+2024-12-04T00:08:21.699-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:21.699-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /projectCat/all
+2024-12-04T00:08:21.701-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-10] u.e._.s.p.control.ProjectCatService      : La búsqueda ha sido realizada correctamente
+2024-12-04T00:08:22.350-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /customers/all
+2024-12-04T00:08:22.350-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:22.350-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /customers/all
+2024-12-04T00:08:22.352-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-2] u.e._.s.c.control.CustomerService        : La búsqueda ha sido realizada correctamente
+2024-12-04T00:08:23.415-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /user/all
+2024-12-04T00:08:23.416-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:23.416-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /user/all
+2024-12-04T00:08:23.419-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-5] u.edu._b.sgc.users.control.UserService   : La búsqueda ha sido realizada correctamente
+2024-12-04T00:08:26.361-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /projects/all
+2024-12-04T00:08:26.361-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:08:26.361-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /projects/all
+2024-12-04T00:08:26.364-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-4] u.e._.s.projects.control.ProjectService  : La búsqueda ha sido realizada correctamente
+2024-12-04T00:23:08.104-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /user/all
+2024-12-04T00:23:08.104-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:23:08.104-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /user/all
+2024-12-04T00:23:08.109-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-1] u.edu._b.sgc.users.control.UserService   : La búsqueda ha sido realizada correctamente
+2024-12-04T00:23:11.185-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /user/all
+2024-12-04T00:23:11.185-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:23:11.185-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /user/all
+2024-12-04T00:23:11.187-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-9] u.edu._b.sgc.users.control.UserService   : La búsqueda ha sido realizada correctamente
+2024-12-04T00:23:53.707-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /user/save
+2024-12-04T00:23:53.707-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:23:53.707-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured OPTIONS /user/save
+2024-12-04T00:23:53.711-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /user/save
+2024-12-04T00:23:53.711-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:23:53.711-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /user/save
+2024-12-04T00:23:55.789-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /user/findId/3
+2024-12-04T00:23:55.789-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:23:55.789-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured OPTIONS /user/findId/3
+2024-12-04T00:23:55.793-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /user/findId/3
+2024-12-04T00:23:55.793-06:00 ERROR 3240 --- [sgc] [http-nio-8080-exec-2] u.edu._b.sgc.security.JwtRequestFilter   : Error al extraer el correo de usuario del token: JWT expired at 2024-12-03T05:37:38Z. Current time: 2024-12-04T06:23:55Z, a difference of 89177793 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-12-04T00:23:55.793-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:23:55.793-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /user/findId/3
+2024-12-04T00:23:57.199-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /user/all
+2024-12-04T00:23:57.199-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:23:57.199-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /user/all
+2024-12-04T00:23:57.203-06:00  INFO 3240 --- [sgc] [http-nio-8080-exec-5] u.edu._b.sgc.users.control.UserService   : La búsqueda ha sido realizada correctamente
+2024-12-04T00:24:31.145-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /login
+2024-12-04T00:24:31.145-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:24:31.145-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured OPTIONS /login
+2024-12-04T00:24:31.145-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /login
+2024-12-04T00:24:31.145-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:24:31.149-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /login
+2024-12-04T00:24:31.265-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-12-04T00:25:55.262-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /login
+2024-12-04T00:25:55.262-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:25:55.262-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /login
+2024-12-04T00:25:55.322-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-12-04T00:26:01.410-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /login
+2024-12-04T00:26:01.410-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:26:01.410-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /login
+2024-12-04T00:26:01.468-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-12-04T00:26:48.983-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /login
+2024-12-04T00:26:48.983-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:26:48.983-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured OPTIONS /login
+2024-12-04T00:26:48.983-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /login
+2024-12-04T00:26:48.983-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-12-04T00:26:48.983-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /login
+2024-12-04T00:26:49.043-06:00 DEBUG 3240 --- [sgc] [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-12-04T00:33:09.312-06:00  INFO 3240 --- [sgc] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04T00:33:09.313-06:00  INFO 3240 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-04T00:33:09.315-06:00  INFO 3240 --- [sgc] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

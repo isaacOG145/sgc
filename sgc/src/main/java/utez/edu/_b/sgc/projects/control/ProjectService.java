@@ -112,9 +112,8 @@ public class ProjectService {
     @Transactional(rollbackFor = {SQLException.class})
     public ResponseEntity<Message> save(ProjectDto dto) {
         try {
-            validateProjectData(dto); // Llama al método de validación de datos
+            validateProjectData(dto);
 
-            // Validar que el cliente esté activo
             validateCustomerIsActive(dto.getCustomerId());
 
             // Validar que la categoría del proyecto esté activa

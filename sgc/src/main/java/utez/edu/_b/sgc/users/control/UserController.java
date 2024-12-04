@@ -1,17 +1,12 @@
 package utez.edu._b.sgc.users.control;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import utez.edu._b.sgc.projectCat.model.ProjectCatDTO;
 import utez.edu._b.sgc.security.JwtUtil;
-import utez.edu._b.sgc.security.dto.AuthResponse;
 import utez.edu._b.sgc.users.model.UserDto;
 import utez.edu._b.sgc.utils.Message;
-import utez.edu._b.sgc.utils.TypesResponse;
 
 @RestController
 @RequestMapping("/user")

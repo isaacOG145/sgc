@@ -68,14 +68,14 @@ public class UserService {
         if (!dto.getName().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$")) {
             throw new IllegalArgumentException("El nombre no puede contener cáracteres especiales");
         }
+        if (!dto.getLastName().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$")) {
+            throw new IllegalArgumentException("El nombre no puede contener cáracteres especiales");
+        }
         if (!dto.getEmail().matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
             throw new IllegalArgumentException("El correo debe ser válido");
         }
         if (!dto.getPhoneNumber().matches("^[0-9]{10}$")) {
             throw new IllegalArgumentException("El teléfono debe contener solo dígitos numéricos");
-        }
-        if(dto.getPassword().length() > 255){
-            throw new IllegalArgumentException("La contraseña excede 255 caracteres");
         }
 
     }

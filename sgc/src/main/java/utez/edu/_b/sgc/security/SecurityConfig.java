@@ -41,6 +41,7 @@ public class SecurityConfig {
                         .requestMatchers("/projects/**").permitAll()//.hasAuthority("ROLE_ADMIN")
                         .requestMatchers("/user/**").permitAll()//.hasAuthority("ROLE_ADMIN")
 
+                        /*
                         // Rutas accesibles por ROLE_USER para consultas
                         .requestMatchers("/customers/all").permitAll()//.hasAuthority("ROLE_USER")
                         .requestMatchers("/customers/active").permitAll()//.hasAuthority("ROLE_USER")
@@ -49,7 +50,10 @@ public class SecurityConfig {
                         .requestMatchers("/projects/active").permitAll()//.hasAuthority("ROLE_USER")
                         .requestMatchers("/projects/all").permitAll()//.hasAuthority("ROLE_USER")
                         .requestMatchers("/user/active").permitAll()//.hasAuthority("ROLE_USER")
-                        .requestMatchers("/user/all").permitAll()//.hasAuthority("ROLE_USER")
+                        .requestMatchers("/user/all").permitAll()
+
+
+                        */
 
                         .anyRequest().permitAll()
 

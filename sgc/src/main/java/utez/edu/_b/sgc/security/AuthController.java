@@ -57,7 +57,7 @@ public class AuthController {
         long expirationTime = jwtUtil.getExpirationTime();
 
 
-        return new AuthResponse(jwt, user.getId(), user.getEmail(), expirationTime);
+        return new AuthResponse(jwt, user.getId(), user.getEmail(),user.getRole().getName(),expirationTime);
     }
 
     @PutMapping("/verify-code")
@@ -73,7 +73,7 @@ public class AuthController {
                 String token = jwtUtil.generateToken(userDetails);
                 long expirationTime = jwtUtil.getExpirationTime();
 
-                AuthResponse authResponse = new AuthResponse(token, dto.getId(), dto.getEmail(), expirationTime);
+                AuthResponse authResponse = new AuthResponse(token, dto.getId(), dto.getEmail(),dto.getRole().getName(), expirationTime);
 
                 return new ResponseEntity<>(authResponse, HttpStatus.OK);
             } else {

@@ -60,28 +60,5 @@ public class AuthController {
         return new AuthResponse(jwt, user.getId(), user.getEmail(),user.getRole().getName(),expirationTime);
     }
 
-    @PutMapping("/verify-code")
-    public ResponseEntity<AuthResponse> verifyCodeAndGenerateToken(@RequestBody UserDto dto) {
-        try {
-
-            ResponseEntity<Message> verifyResponse = userService.verifyCode(dto);
-
-            if (verifyResponse.getStatusCode() == HttpStatus.OK) {
-
-                UserDetails userDetails = userDetailsService.loadUserByUsername(dto.getEmail());
-
-                String token = jwtUtil.generateToken(userDetails);
-                long expirationTime = jwtUtil.getExpirationTime();
-
-                AuthResponse authResponse = new AuthResponse(token, dto.getId(), dto.getEmail(),dto.getRole().getName(), expirationTime);
-
-                return new ResponseEntity<>(authResponse, HttpStatus.OK);
-            } else {
-                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-            }
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
 
 }

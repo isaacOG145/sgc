@@ -37,7 +37,7 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/login").permitAll()
-                        .requestMatchers("/verify-code").permitAll()
+                        .requestMatchers("/user/verify-code").permitAll()
                         .requestMatchers("/user/send-email").permitAll()
 
                         .requestMatchers("/user/change-pass").permitAll()

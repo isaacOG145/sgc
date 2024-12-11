@@ -25,6 +25,7 @@ import utez.edu._b.sgc.utils.TypesResponse;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Random;
 
@@ -408,29 +409,17 @@ public class UserService {
         return new ResponseEntity<>(new Message("Correo enviado", TypesResponse.SUCCESS), HttpStatus.OK);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseEntity<Message> verifyCode(UserDto dto) {
-        try {
-            User user = userRepository.findFirstByEmailAndCode(dto.getEmail(), dto.getCode())
-                    .orElseThrow(() -> new RuntimeException("No se pudo verificar el código. El correo o el código pueden ser incorrectos."));
-
-            if (user.isVerified()) {
-                return new ResponseEntity<>(new Message("Este código ya ha sido utilizado o el usuario ya está verificado.", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
-            }
-
-            user.setVerified(true);
-            user = userRepository.saveAndFlush(user);
-
-            return new ResponseEntity<>(new Message(user, "Código verificado correctamente.", TypesResponse.SUCCESS), HttpStatus.OK);
-        } catch (IllegalArgumentException e) {
-
-            return new ResponseEntity<>(new Message(e.getMessage(), TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
-        } catch (Exception e) {
-            // Capturar cualquier otro error
-            logger.error("Error al verificar el código", e);
-            return new ResponseEntity<>(new Message("Revise los datos e inténtelo de nuevo.", TypesResponse.ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
+        Optional<User> optional = userRepository.findFirstByEmailAndCode(dto.getEmail(),dto.getCode());
+        if(!optional.isPresent()){
+            return new ResponseEntity<>(new Message("No se pudo verificar", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
         }
+
+        return new ResponseEntity<>(new Message("Verificado", TypesResponse.SUCCESS), HttpStatus.OK);
     }
+
+
 
 
     @Transactional
@@ -448,7 +437,6 @@ public class UserService {
                     : user.getPassword();
 
             user.setPassword(encodedPassword);
-            user.setVerified(false);
             user.setCode(null);
 
             user = userRepository.saveAndFlush(user);

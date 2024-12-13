@@ -42,17 +42,17 @@ public class SecurityConfig {
 
                         .requestMatchers("/user/change-pass").permitAll()
 
-                        .requestMatchers("/user/findId/**").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
+                        .requestMatchers("/user/findId/**").permitAll()//.hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
 
-                        .requestMatchers("/customers/all").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
-                        .requestMatchers("/projectCat/all").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
-                        .requestMatchers("/projects/all").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
-                        .requestMatchers("/user/all").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
+                        .requestMatchers("/customers/all").permitAll()//.hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
+                        .requestMatchers("/projectCat/all").permitAll()//.hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
+                        .requestMatchers("/projects/all").permitAll()//.hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
+                        .requestMatchers("/user/all").permitAll()//.hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
 
-                        .requestMatchers("/customers/**").hasAuthority("ROLE_ADMIN")
-                        .requestMatchers("/projectCat/**").hasAuthority("ROLE_ADMIN")
-                        .requestMatchers("/projects/**").hasAuthority("ROLE_ADMIN")
-                        .requestMatchers("/user/**").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/customers/**").permitAll()//.hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/projectCat/**").permitAll()//.hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/projects/**").permitAll()//.hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/user/**").permitAll()//.hasAuthority("ROLE_ADMIN")
 
 
                         .anyRequest().permitAll()
